@@ -1,0 +1,4991 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON to HTML</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .nested-table {
+            margin-left: 20px;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Packages</h1>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Tags</th>
+        </tr>
+
+        <tr>
+            <td>Integrations</td>
+            <td>BOND Home Integration</td>
+            <td>Allows you to integrate a BOND Home device into your Hubitat system</td>
+            <td>LAN, IR & RF</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Device Groups</td>
+            <td>Allows you to group contact sensors into a single device</td>
+            <td>Automations & Groups</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Hub Rebooter</td>
+            <td>Reboot your hub on a schedule to resolve performance issues</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Presence Monitor</td>
+            <td>Provides a way to combine presence from multiple devices into a single virtual device</td>
+            <td>Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Rheem EcoNet Integration</td>
+            <td>Integrates Rheem EcoNet Water Heaters into your Hubitat system</td>
+            <td>Cloud, Water Heater</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Petnet SmartFeeder Integration</td>
+            <td>Integrates Petnet SmartFeeders into your Hubitat system</td>
+            <td>Cloud, Pets & Animals</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Kohler DTV+ Integration</td>
+            <td>Integrates Kohler DTV+ showers into your Hubitat system</td>
+            <td>LAN, Shower, Bathroom</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Kevo Plus Integration</td>
+            <td>Integrates Kevo Plus locks into your Hubitat system</td>
+            <td>Cloud, Locks</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Denon HEOS Integration</td>
+            <td>Integrates Denon HEOS Speakers into your Hubitat system</td>
+            <td>LAN, Speakers, Multimedia</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Holiday Switcher</td>
+            <td>Turn on a switch when it's a holiday and off when it isn't</td>
+            <td>Cloud, Automations & Groups</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Litter Robot Integration</td>
+            <td>Integrates Litter Robot cat boxes into your Hubitat system</td>
+            <td>Cloud, Pets & Animals</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>MyQ Garage Door Integration</td>
+            <td>Integrates MyQ garage doors into your Hubitat system</td>
+            <td>Cloud, Doors & Windows, Garage Doors</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>AlarmDecoder Integration</td>
+            <td>Integrates an AlarmDecoder (AD2Pi) with your Hubitat system so you can control Ademco and DSC alarm systems.</td>
+            <td>LAN, Safety & Security, Alarm Systems</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Andersen Verilock Translator</td>
+            <td>Integrate your Andersen Verilocks using a Verilock Translation with your Hubitat system for both contact and lock monitoring.</td>
+            <td>ZWave, Doors & Windows</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sure Petcare Pet Door</td>
+            <td>Control your Sure Petcare Pet Door and monitor your pet from within Hubitat.</td>
+            <td>Cloud, Pets & Animals</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Hubitat Hub Controller</td>
+            <td>Control your Hubitat Hub with actions such as shutdown and reboot.</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Withings Integration</td>
+            <td>Integrate your Withings devices with Hubitat.</td>
+            <td>Cloud, Health & Fitness, Scales, Sleep</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Petsafe SmartFeeder Integration</td>
+            <td>Integrates Petsafe Smart Feeders into your Hubitat system</td>
+            <td>Cloud, Pets & Animals</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Orbit BHyve Integration</td>
+            <td>Integrate your Orbit BHyve devices with Hubitat.</td>
+            <td>Cloud, Irrigation, Valves</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>LG ThinQ Integration</td>
+            <td>Integrate your L:G ThinQ devices with Hubitat.</td>
+            <td>Cloud, Appliances</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Hubitat Alarm</td>
+            <td>Integration with DSC IT-100/Envisalink or Honeywell Vista/Envisalink Alarm Systems (requires SBC or Raspberry Pi). For more information https://github.com/Welasco/HubitatAlarm</td>
+            <td>Alarm Systems, Monitoring, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>WakeOnLan</td>
+            <td>Wake On Lan  allows you to wake/boot your PC's up from the hub using any automation app you want. It uses its own implication of WakeOnLan so it will probably work even when other solutions fail</td>
+            <td>Multimedia, Misc. Devices, LAN, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>PC Controller</td>
+            <td>Send Commands to your windows pc and get events from the pc. Uses a windows software called EventGhost</td>
+            <td>Multimedia, Misc. Devices, LAN, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utilities</td>
+            <td>Device Watchdog</td>
+            <td>Keep an eye on your devices and see how long it's been since they checked in.</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utilities</td>
+            <td>The Flasher</td>
+            <td>Flash your lights based on several triggers!</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>iRobot Scheduler</td>
+            <td>iRobot Scheduler is an application and device that enables local execution and scheduling of Roomba and Brava cleaning tasks in assistance with a Raspberry Pi running Dorita980 and Rest980. This application and device works with ALL WiFi enabled Roomba and Braava devices.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>You Got Mail</td>
+            <td>You Got Mail is a notification application that provides notifications when a contact sensor is open on a mailbox. This application supports Pushover, Music Speakers, Speech Speakers, Echo Speaks devices and Google devices for notifications. Application allows for custom notifications, random messages and mail delivery time window. Notification options if mailbox was left open.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>EcoLink Contact Sensor Custom</td>
+            <td>Swaps Open/Close messages in the driver.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Kiddie Fire Alarm Driver</td>
+            <td>The Kiddie relay enables you to connect a wired fire alarm system to pretty much anything.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Salt Tank MQTT Driver</td>
+            <td>MQTT Driver to support Salt Tank level project.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Aeotec Range Extender 7</td>
+            <td>Aeotec Range Extender 7 Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Aeotec Water Sensor 6</td>
+            <td>Aeotec Water Sensor 6 Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GoControl Thermostat</td>
+            <td>Advanced GoControl GC-TBZ48 Thermostat Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>HomeSeer HS-FLS100+ Floodlight Sensor</td>
+            <td>HomeSeer HS-FLS100+ Floodlight Sensor Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>HomeSeer HSM200 Multi Sensor</td>
+            <td>HomeSeer HSM200 Multi Sensor Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Honeywell T6 Pro Thermostat</td>
+            <td>Advanced Honeywell T6 Pro Thermostat Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Inovelli 4-in-1 Sensor</td>
+            <td>Inovelli 4-in-1 Sensor Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Inovelli Multi-White Bulb</td>
+            <td>Inovelli LZW41 Multi-White Bulb Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Inovelli Multi-Color Bulb</td>
+            <td>Inovelli LZW42 Multi-Color Bulb Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Remotec ZXT-120</td>
+            <td>Remotec ZXT-120 Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>RGBGenie Z-Wave LED Controller</td>
+            <td>RGBGenie Z-Wave LED Controller Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>RGBGenie Z-Wave Touch Panel</td>
+            <td>RGBGenie Z-Wave Touch Panel Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>RGBGenie Z-Wave Micro Controller</td>
+            <td>RGBGenie Z-Wave Micro Controller Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ring Contact Sensor Gen1</td>
+            <td>Ring Contact Sensor Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ring Motion Sensor Gen1</td>
+            <td>Ring Motion Sensor Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ring Range Extender Gen1</td>
+            <td>Ring Range Extender Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ring Smoke CO Listener Gen1</td>
+            <td>Ring Smoke CO Listener Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Z-Wave Firmware Updater</td>
+            <td>Z-Wave Firmware Updater Integrations Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zooz Zen21 Switch</td>
+            <td>Advanced Zooz Zen 21 Switch Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zooz Zen22 Dimmer</td>
+            <td>Advanced Zooz Zen 22 Dimmer Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zooz Zen23 Switch</td>
+            <td>Advanced Zooz Zen 23 Switch Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zooz Zen24 Dimmer</td>
+            <td>Advanced Zooz Zen 24 Dimmer Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zooz Zen26 Switch</td>
+            <td>Advanced Zooz Zen 26 Central Scene Switch Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zooz Zen27 Dimmer</td>
+            <td>Advanced Zooz Zen 27 Central Scene Dimmer Driver</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>GE Portable Smart Motion Sensor</td>
+            <td>Driver for GE Portable Smart Motion Sensor.</td>
+            <td>Doors & Windows, Misc. Devices, Tools & Utilities, Safety & Security, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Auto Lock</td>
+            <td>Automatically lock the door after a pre-determined amount of time, when door closed after a delay, or when triggered with a switch.</td>
+            <td>Locks, Doors & Windows, Misc. Devices, Tools & Utilities, Safety & Security, Notifications, Presence & Location, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Z-Wave Garage Door Controller</td>
+            <td>Z-Wave Garage Door Controller driver for the GDZ000-X line of devices from GoControl/Linear</td>
+            <td>Garage Doors, Locks, Doors & Windows, Misc. Devices, Tools & Utilities, Safety & Security, Notifications, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ecobee Suite</td>
+            <td>Ecobee Suite integrates Ecobee thermostats and sensors with Hubitat (and SmartThings)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>MeteoBridge Weather Station</td>
+            <td>Weather Station using MeteoBridge/WeatherBridge via Local Connection (hubAction) for Hubitat & SmartThings</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>PurpleAir Air Quality Station</td>
+            <td>PurpleAir Air Quality Station for SmartThings & Hubitat</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Dimmer Button Controller</td>
+            <td>Easily configure button devices to control bulbs/dimmers</td>
+            <td>Lights & Switches, Buttons</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>CoCoHue (Hue Bridge Integration)</td>
+            <td>Community-created Hue Bridge inegration for lights, groups, and scenes</td>
+            <td>Lights & Switches, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Device Activity Check</td>
+            <td>Configure automatic notifications for inactive (no activity within specified period) devices</td>
+            <td>Tools & Utilities, Monitoring, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Device Status Announcer</td>
+            <td>Receive TTS announcements or notifications for devices (locks, contact sensors, etc.) in undesired states at specifc time or on demand</td>
+            <td>Tools & Utilities, Monitoring, Notifications, Safety & Security, Doors & Windows, Locks</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Lights on Motion Plus</td>
+            <td>Turn on/off lights with motion; optionally dim before turning off. Per-mode configuration and other settings available.</td>
+            <td>Lights & Switches, Motion Control</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>One Switch at a Time</td>
+            <td>Allows you to select a group of switches and have others turned off when one is turned on (so only one can be on at a time)</td>
+            <td>Lights & Switches, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zooz ZEN34 (Remote) Community Driver</td>
+            <td>Community driver supporting all features (including multi-taps) on the Zooz ZEN34 remote</td>
+            <td>Lights & Switches, Buttons</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>(DEPRECATED) Kasa Devices Integration</td>
+            <td>DEPRECATED in favor of Hubitat Built-In App and Hubitat Matter Implementation.  Matter Devices (non-C8 Hubs) are supported in the Tp-Link TAPO integration (in HPM).</td>
+            <td>LAN, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>TAPO Device Integration</td>
+            <td>TAPO Plugs, Switches, Bulbs and Kasa Matter(only) devices integration</td>
+            <td>LAN, Lights & Switches, Cleaning Devices, Energy Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>HubiThings Replica Drivers</td>
+            <td>Drivers for HubiThings Replica Samsung Applicance and miscellaneous devices.</td>
+            <td>Appliances</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>BleBox Device Integration</td>
+            <td>BleBox Devices Integration</td>
+            <td>Lights & Switches, LAN, Doors & Windows</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Samsung MultiRoom Speakers</td>
+            <td>Samsung MultiRoom Speaker Integration</td>
+            <td>LAN, Notifications, Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Samsung TV Remote</td>
+            <td>Samsung TV Remote (2016 and Later TVs)</td>
+            <td>LAN, Multimedia</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Kasa Camera</td>
+            <td>Kasa Fixed/PTC Camera and Doorbell LAN integration</td>
+            <td>LAN, Security, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>OpenWeatherMap-Alerts Weather Driver</td>
+            <td>OpenWeatherMap-Alerts Weather Driver</td>
+            <td>Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>DarkSky.net-Weather-Driver</td>
+            <td>DarkSky.net-Weather-Driver</td>
+            <td>Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Weather-Display With DarkSky.net Forecast Driver</td>
+            <td>Weather-Display With DarkSky.net Forecast Driver</td>
+            <td>Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Weather-Display With OWM-Alerts Forecast Driver</td>
+            <td>Weather-Display With OWM-Alerts Forecast Driver</td>
+            <td>Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Fan Thermostat</td>
+            <td>This package allows you to create virtual thermostat devices to control ceiling fans based on temperature</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Google Home Community</td>
+            <td>A community-maintained, full-featured, and highly configurable integration between Hubitat Elevation and Google Home.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Inovelli Drivers (Gen 1)</td>
+            <td>Drivers provided by Inovelli</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Inovelli Drivers (Gen 2)</td>
+            <td>Drivers provided by Inovelli</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Z-Wave Association Tool</td>
+            <td>Inovelli Tool to create direct associations between Z-Wave devices.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Smartly Inject</td>
+            <td>Enables Smartly JavaScript features in the Dashboard!</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Aqara Smart Curtain Motor</td>
+            <td>Works with models ZNCLDJ11LM & ZNCLDJ12LM.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Aqara Water Leak Sensor</td>
+            <td>Works with model SJCGQ11LM.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Generic Device Toolbox</td>
+            <td>Used to clean device data and get Zigbee device fingerprints</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Generic Dimmer (with Presence)</td>
+            <td>Works with Generic Dimmers (only tested with the Nue Dimmer, might need changes for other devices. Please report your fingerprints and progress.)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Generic Outlet (with Presence)</td>
+            <td>Works with Generic Outlets (please report your fingerprints)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Generic Repeater (with Presence)</td>
+            <td>Works with most repeater-only devices (Xbee with Send Type set to Bind)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Generic Switch (with Presence)</td>
+            <td>Works with Generic Switches (this includes many multi-relay ones, like Nue. Please report your fingerprints)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>NOT WORKING IKEA Tradfri On/Off Switch</td>
+            <td>Works with model E1743.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sonoff Button</td>
+            <td>Works with model SNZB-01.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sonoff Contact Sensor</td>
+            <td>Works with model SNZB-04.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sonoff Motion Sensor</td>
+            <td>Works with model SNZB-03.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sonoff Temperature & Humidity Sensor</td>
+            <td>Works with model SNZB-02.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tuya Alarm</td>
+            <td>Works with the Tuya Alarm.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tuya Valve</td>
+            <td>Works with Tuya Valves.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Xiaomi Mijia Smart Light Sensor (Zigbee 3.0)</td>
+            <td>Works with model GZCGQ01LM.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Xiaomi/Aqara Contact Sensor</td>
+            <td>Works with models MCCGQ01LM & MCCGQ11LM.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Xiaomi/Aqara Motion Sensor</td>
+            <td>Works with models RTCGQ01LM & RTCGQ11LM.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Xiaomi/Aqara Plug/Outlet</td>
+            <td>Works with models ZNCZ02LM, ZNCZ12LM(needs testing) & QBCZ11LM.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Xiaomi/Aqara Temperature & Humidity Sensor</td>
+            <td>Works with models WSDCGQ01LM & WSDCGQ11LM.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Xiaomi/Aqara/Opple Button/Switch/Remote</td>
+            <td>Works with models WXKG01LM, WXKG11LM (2015 & 2018), WXKG12LM, WXKG02LM (2016 & 2018), WXKG03LM (2016 & 2018), WXCJKG11LM, WXCJKG12LM & WXCJKG13LM.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tasmota for Hubitat Elevation</td>
+            <td>Allows you to integrate Tasmota-based devices with Hubitat Elevation.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Solaredge Monitor</td>
+            <td>Retrieve inverter metrics from the Solaredge API to use in dashboards or as attributes for rules. Information available is current power flow, generation statistics, and current generation/consumtion metrics.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>Echo Speaks</td>
+            <td>Integrate your Amazon Echo devices into your Hubitat environment to create virtual Echo Devices. These virtual devices will allow you to speak text, make announcements, control media playback including volume, and many other Alexa features.</td>
+            <td>Automations & Groups, Notifications, Multimedia, Speakers, Integrations, Timers, Voice Assistants, Misc. Devices, Tools & Utilities, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>Echo Speaks (BETA)</td>
+            <td>Integrate your Amazon Echo devices into your Hubitat environment to create virtual Echo Devices. These virtual devices will allow you to speak text, make announcements, control media playback including volume, and many other Alexa features.</td>
+            <td>Automations & Groups, Notifications, Multimedia, Speakers, Integrations, Timers, Voice Assistants, Misc. Devices, Tools & Utilities, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Homebridge v2.0</td>
+            <td>Provides the API interface between Homebridge (HomeKit) and Hubitat.</td>
+            <td>Automations & Groups, Notifications, Integrations, Voice Assistants, Misc. Devices, Tools & Utilities, Safety & Security, HomeKit</td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>Switch Dashboard</td>
+            <td>Turn your LED status switches into mini-dashboards</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Auto Off</td>
+            <td>Automatically turn off/on devices after set amount of time on/off</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>webCoRE</td>
+            <td>webCoRE for Hubitat - run webCoRE pistons (automations) locally on your Hubitat system</td>
+            <td>Automations & Groups, Tools & Utilities, Dashboards</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>IntesisHome</td>
+            <td>intesisHome Thermostat for Hubitat</td>
+            <td>Climate Control, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>TankUtility</td>
+            <td>tankUtility Propane tank monitoring for Hubitat</td>
+            <td>Energy Monitoring, LAN, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>NuHeat</td>
+            <td>nuHeat Signature Thermostat for Hubitat</td>
+            <td>Climate Control, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Enphase Solar</td>
+            <td>Monitor enPhase Solar Production for Hubitat</td>
+            <td>Energy Monitoring, LAN, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Vacation Lighting Director</td>
+            <td>Vacation Lighting Director controls lights when away</td>
+            <td>Automations & Groups, LAN, Safety & Security, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>NOAA Weather Alerts (Latest)</td>
+            <td>NOAA Weather Alerts provides weather alert notifications for USA based users through TTS using any or all Music devices, Echo Speaks devices, Google/Speech devices, PushOver Notifications devices, Hubitat app, and Dashboard tiles. NOAA provides granular customization to enable users to watch for specific events, severity, urgency while also using global variables to customize alert notification messages.</td>
+            <td>Weather, LAN, Safety & Security, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Husqvarna AutoMower Manager</td>
+            <td>AutoMower Integration for Hubitat - control and monitor your Husqvarna AutoMower on your Hubitat system</td>
+            <td>Automations & Groups, LAN, Misc. Devices, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Countdown Timer</td>
+            <td>A simple countdown timer device that is designed to integrate well with SharpTools</td>
+            <td>Timers</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Roku TV Integration</td>
+            <td>Manage all your Roku TVs and Roku Media players through Hubitat with full support for activating applications as switches, and creating any remote command as a momentary switch.  Use this device to control your Roku system, or to make a smart home that responds to Roku actions.</td>
+            <td>Multimedia, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Advanced Hue Hub Integration</td>
+            <td>Add support to Hubitat for Hue Groups, Bulbs, and Scenes.  This integration differs from the built-in Hue integration, because this one allows you to import Hue scenes which can be added to any Hubitat scene/group to be turned on.  This was created specifically to satisfy a need the Hubitat could not.  With this driver, it is possible to smoothly transition hue scenes for any Hue group.  I plan to add management of Hue scenes at a later time, as well as a capture state, similar to Hubitat's scene manager.</td>
+            <td>Lights & Switches, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>iopool EcO Pool/Spa Monitor</td>
+            <td>Add support to Hubitat for iopool's EcO pool / spa water quality monitor.  iopool can also be used breath new life into the no-longer support pHin pool monitor.  The iopool EcO is used to track water pH, Oxidation-reduction potential (ora), and temperature.</td>
+            <td>Cloud, LAN, Monitoring, Multi Sensors, Pools & Spas, Water</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Pool Controller</td>
+            <td>Integration from Hubitat to a Pentair *Touch Controller using the nodejs-poolController</td>
+            <td>Pools & Spas</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Rain Machine</td>
+            <td>Integration from Hubitat to a Rain Machine sprinkler controller - https://www.rainmachine.com/</td>
+            <td>Irrigation</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Shinobi</td>
+            <td>Integration from Hubitat to a Shinobi NVR - https://www.shinobi.video/</td>
+            <td>Integrations, Monitoring, Motion Control, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>SendGrid</td>
+            <td>Notification driver for SendGrid Email Service - 100 messages per day on the free plan.</td>
+            <td>Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Smarter Bulbs</td>
+            <td>Help keep track of the state of your smart bulbs in case of a power outage</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Geofency Presence</td>
+            <td>Set presence based on Geofency iOS App</td>
+            <td>Presence & Location, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>OwnTracks Presence</td>
+            <td>Set presence based on OwnTracks iOS/Android App</td>
+            <td>Presence & Location, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Honeywell Security</td>
+            <td>Integration with Honeywell Vista/Envisalink Alarm Systems (requires external node-proxy server)</td>
+            <td>Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Neosmart Blinds</td>
+            <td>Control your NeoSmart blinds (requires Neosmart hub)</td>
+            <td>Doors & Windows</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Toggle API</td>
+            <td>Toggle devices that don't support the toggle function</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Smart Mailbox</td>
+            <td>Be notified when you recieve mail in your mailbox</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Weewx Local Capabilities</td>
+            <td>Allows you to bring capabilities like outdoor temp, rain status, etc into Hubitat.  Switch will control if its wet/dry for use with Simple Irrigation app</td>
+            <td>Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Envisalink for Vista Ademco/20p Alarm System</td>
+            <td>Native Hubitat support for Vista Ademco/20p via Envisalink - unsupported at this time</td>
+            <td>Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Camect Connect</td>
+            <td>Allows you to connect and sync HSM and virtual motion devices with your Camect NVR</td>
+            <td>Motion Control, Monitoring, Safety & Security, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>WaterGuru Integration</td>
+            <td>Allows you to connect to your pool's WaterGuru device and get Chlorine, pH, flow rate and temperature.</td>
+            <td>Pools & Spas, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Keenect Lite</td>
+            <td>Controls Keen Vents using temp sensors</td>
+            <td>Climate Control, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Seasonal Pool Controller</td>
+            <td>Controls a pool pump based on calendar Month</td>
+            <td>Pools & Spas</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Bathroom Humidity Fan</td>
+            <td>Controls a Bathroom Fan Based on humidity and/or time</td>
+            <td>Bathroom, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Thermostat Tracker</td>
+            <td>Tracks Thermostat usage by Thermostat State</td>
+            <td>Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>HubiGraphs</td>
+            <td>All your graphing needs, hosted locally on your hub!</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Nyckelharpa HSM Extension</td>
+            <td>Nyckelharpa is a user created Hubitat Home Security Monitor (HSM) extension. 
+ Under user control allows HSM to arm with an Open Contact sensor.
+ Additionally, optionally sets Mode when HSM status changes,
+ and simplifies setting up security related TTS and notification messaging</td>
+            <td>Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>SmartUPS VBS Version</td>
+            <td>SmartUPS driver for APC UPS devices. Gracefully shuts down your HUB during a power failure. 
+ Designed for Windows, interface is VBS, no PHP server required. Also provides UPS status information. 
+ It may work on any system supporting VBS and apcupsd, but was tested only on Windows</td>
+            <td>Energy Monitoring, Safety & Security, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Nuki Smart Lock Integration</td>
+            <td>App & drivers for integration of Nuki Smart Lock to Hubitat Elevation (using Nuki Bridge only)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Channels DVR</td>
+            <td>This driver works with Channels DVR clients. It allows remote control features such as On/Off, Pause, Resume, Stop, Play Channel, mute, etc...</td>
+            <td>LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Weather Canada (OWM3.0-EC)</td>
+            <td>Now using OW API 3.0 - Polls weather information from OpenWeatherMap 3.0 and Weather Environment Canada (Alert RSS Feed - https://weather.gc.ca/)</td>
+            <td>Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Rachio Community</td>
+            <td>Rachio Community Package</td>
+            <td>Irrigation</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Conditional Image Server</td>
+            <td>Serve images from hub based upon conditions</td>
+            <td>Dashboards, Multimedia, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Dynamic Image Switcher</td>
+            <td>Switch Dashboard Background Image based on configured conditions</td>
+            <td>Dashboards, Multimedia, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>GameTime</td>
+            <td>Follow and automate based on the schedules of your favorite college and professional sports teams</td>
+            <td>Dashboards, Multimedia, Health & Fitness</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Lift Off</td>
+            <td>Follow and automate based on the Space-X launch schedule</td>
+            <td>Dashboards, Multimedia, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Multi-Place</td>
+            <td>Automate based on current traffic conditions from Google Traffic. Use a single dashboard tile to represent your location, no matter where you are.</td>
+            <td>Vehicles & Transportation, Sleep, Presence & Location, Dashboards</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>MowBot Tamer</td>
+            <td>Tame your robot mower.</td>
+            <td>Control, Mowers, Convenience, Tools & Utilities, weather</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Meater</td>
+            <td>Meater Temperature Probes.</td>
+            <td>Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Dashboards</td>
+            <td>Quick Chart</td>
+            <td>Chart Data Easily</td>
+            <td>Dashboards, Energy Monitoring, Monitoring, Utility, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Dashboards</td>
+            <td>Withings</td>
+            <td>Withings Integration</td>
+            <td>Health & Fitness, Integrations, Scales, Sleep, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>ReCirc</td>
+            <td>Control for hot water recirculation systems</td>
+            <td>Control, Water, Water Heater</td>
+        </tr>
+        
+        <tr>
+            <td>Integration</td>
+            <td>FFL</td>
+            <td>Fantasy Football Integration</td>
+            <td>Dashboards, Integration, Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Hubitat Ring Integration (Unofficial)</td>
+            <td>Unofficial Ring integration for Hubitat</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Miscellaneous Drivers</td>
+            <td>Miscellaneous drivers for Hubitat</td>
+            <td>ZWave, Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Fibaro Smart Implant FGBS-222</td>
+            <td>Driver for Fibaro Smart Implant FGBS-222</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Garadget MQTT Driver</td>
+            <td>MQTT Device Handler for Garadget</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Aqualink-Driver</td>
+            <td>Aqualink Integration for Controlling your Pool Equipment</td>
+            <td>Tools & Utilities, Monitoring, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>UniFi-Driver</td>
+            <td>UniFi Integration with Hubitat for tracking precense and blocking network devices</td>
+            <td>LAN, Tools & Utilities, Monitoring, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>OctoPrint</td>
+            <td>OctoPrint 3d Printing Integration</td>
+            <td>Tools & Utilities, Monitoring, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>PublicIPTracker</td>
+            <td>Tracks your public ip address</td>
+            <td>LAN, Tools & Utilities, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Aeotec Range Extender 7</td>
+            <td>Driver for the Aeotec Range Extender 7</td>
+            <td>Repeaters & Extenders, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GoControl Garage Door Opener</td>
+            <td>Driver for GoControl Garage Door Openers</td>
+            <td>Garage Doors, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Idle Node Refresher</td>
+            <td>Application to refresh nodes that have not been used for an extended period of time</td>
+            <td>Tools & Utilities, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Multi-Relay Door/Shade Controller</td>
+            <td>Application and driver for a Multi-Relay Door/Shade Controller</td>
+            <td>Doors & Windows, Window Coverings</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>NUT ups monitor (upsmon)</td>
+            <td>UPS monitor and shutdown controller for use with Network UPS Tools (NUT)</td>
+            <td>Tools & Utilities, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Philio PAT02 Flood / Temperature / Humidity sensors</td>
+            <td>Driver for the PAT02-A/B/C Flood / Temperature / Humidity sensors made by Philio (also Zipato, Safe Grow, etc.)</td>
+            <td>Temperature & Humidity, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Philio PAT02-B Temperature / Humidity sensor</td>
+            <td>Driver for the PAT02-B Temperature / Humidity sensor made by Philio (also Zipato, Safe Grow, etc.)</td>
+            <td>Temperature & Humidity, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ring Alarm Range Extender gen2</td>
+            <td>Driver for the Ring Alarm Range Extender gen2</td>
+            <td>Repeaters & Extenders, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Somfy Z-Wave to RTS Interface II (ZRTSII)</td>
+            <td>Drivers for the Somfy Z-Wave to RTS Interface II (ZRTSII)</td>
+            <td>Window Coverings, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Simple Contact Reminders</td>
+            <td>A simple reminder notification system for contact sensors (doors/windows/etc.) that have been left open</td>
+            <td>Notifications, Doors & Windows</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Simple Idle Alerts</td>
+            <td>A simple alert notification system for devices that have not been updated for a period of time</td>
+            <td>Notifications, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Simple Switch Reminders</td>
+            <td>A simple reminder notification system for switches that have been left on</td>
+            <td>Notifications, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Simple Switch Off Timers</td>
+            <td>A simple switch timeout system for turning off switches that have been left on</td>
+            <td>Timers, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>WeeWX (weather station) to Hubitat driver</td>
+            <td>Driver to provide a direct (local) connection between WeeWX and Hubitat</td>
+            <td>Weather, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zooz Temperature / Humidity XS Sensor ZSE44</td>
+            <td>Driver for the Zooz ZSE44 Temperature / Humidity XS Sensor</td>
+            <td>Temperature & Humidity, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zooz Water Leak XS Sensor ZSE42</td>
+            <td>Driver for the Zooz ZSE42 Water Leak XS sensor</td>
+            <td>Water, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>XBee3</td>
+            <td>Driver for XBee3 configured to report voltage and chip temperature</td>
+            <td>Repeaters & Extenders, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Somfy ZRTSI</td>
+            <td>A driver for the Somfy ZRTSI</td>
+            <td>Window Coverings, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Rainforest Eagle</td>
+            <td>A driver for the Rainfoest Eagle</td>
+            <td>LAN, Energy Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>SunCalc</td>
+            <td>A driver that calculates the position of the sun</td>
+            <td>Weather</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Laundry Manager</td>
+            <td>Monitors the power consumption of a washer & dryer and alerts you upon cycle completion</td>
+            <td>Appliances, Energy Monitoring, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>WeatherFlow Lite</td>
+            <td>A pared-down weather driver that subscribes to your WeatherFlow station devices using the WebSocket API</td>
+            <td>Cloud, Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Auto Shades</td>
+            <td>Automatically control smartblinds and shades, by integrating with a light sensor.</td>
+            <td>Window Coverings</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Combined Presence</td>
+            <td>Combine two or more presence sensors to control an output Virtual Presence Sensor.</td>
+            <td>Presence & Location, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Dimmer Minimums</td>
+            <td>Enforce minimum dimming levels for smart dimmers that don't support it natively in their firmware.</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Reliable Locks</td>
+            <td>Create virtual locks that wrap your physical lock devices, making them more reliable.  Especially useful for z-wave locks.</td>
+            <td>Locks, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Lockdown</td>
+            <td>Reliably lock all the doors in your house when a specified switch is triggered.</td>
+            <td>Locks, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Switch Bindings</td>
+            <td>Bind two or more switches/dimmers together to behave as one.</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Cooper Aspire RFWC5 Scene Controller Driver</td>
+            <td>Driver for the Cooper Aspire RFWC5 Scene Controller.</td>
+            <td>Lights & Switches, Buttons</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>HTTP Presence Sensor</td>
+            <td>A virtual presence sensor that determines its state by trying to contact a device on your network.</td>
+            <td>Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>iPhone WiFi Presence Sensor</td>
+            <td>Detect presence of either an iPhone or an Android smartphone.  It detects that they have connected to your home network.</td>
+            <td>Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>IKEA Trådfri Puck Driver</td>
+            <td>A driver for the IKEA puck device.</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Double Tap to the Max</td>
+            <td>Double tap on your dimmers to bring them to max/min brightness.</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Abode Alarm</td>
+            <td>Realtime management and tracking of an Abode Alarm system.</td>
+            <td>Alarm Systems, Monitoring, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Weatherstation weather driver</td>
+            <td>This is a driver for the free weatherstack API. They provide 1,000 free calls per month so you can run an hourly refresh rate. It also calculates luminance seperately and can undate this more frequently.</td>
+            <td>Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Rainbird sprinkler controller driver</td>
+            <td>Driver for Rainbird sprinkler wifi controller</td>
+            <td>Irrigation</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sleep Number Controller</td>
+            <td>Control your Sleep Number bed and use it for presence</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>HVAC Zoning</td>
+            <td>HVAC Equipment and Zoning Control</td>
+            <td>Climate Control, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Auto Lock Door</td>
+            <td>Automatically locks a specific door after X minutes when closed and unlocks it when open after X seconds.</td>
+            <td>Locks, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Virtual Keypad</td>
+            <td>Create virtual keypads to control HSM, Mode changes, and other custom commands.  This uses a companion app to more easily setup your virtual keypads. Install/configure instructions are in the '[RELEASE] Virtual Keypad' release thread.</td>
+            <td>Alarm Systems, Dashboards, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>SABnzbd</td>
+            <td>Connect SABnzbd to hubitat</td>
+            <td>LAN, Multimedia, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>iFrameAdvanced</td>
+            <td>Use iFrame content several ways on your dashboards</td>
+            <td>LAN, Multimedia, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>AeotecMultiSensor6 Driver</td>
+            <td>A more preference filled alternative to the Built-In driver.</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>HoneywellThermo-TCC Driver</td>
+            <td>Integrate Honeywell's Total Comfort Control for your WiFi Thermostat.</td>
+            <td>Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Hubitat-BetterLaundryMonitor</td>
+            <td>Create alerts for your Laundry being done.</td>
+            <td>Energy Monitoring, Monitoring, Appliances</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Auto_Off</td>
+            <td>Automatically turn Off a switch after a delay.</td>
+            <td>Lights & Switches, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Auto_Off Bundle</td>
+            <td>Automatically turn Off a switch after a delay.</td>
+            <td>Lights & Switches, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>GetAttributeApp</td>
+            <td>Display a device's Capabilities, Attributes and Commands.</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Air Quality from AirNow</td>
+            <td>Yet Another Air Quality Index from AirNow </td>
+            <td>Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Honeywell Thermo Parent</td>
+            <td>A Parent/child version of the original</td>
+            <td>Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>EtherRain</td>
+            <td>EtherRain Sprinkler Controller and child Driver</td>
+            <td>Irrigation, LAN, Timers, Valves, Water</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>AverageThis</td>
+            <td>Calculates a Rolling Average of Illuminance, Temperature and Relative Humidity from a set of Omni Sensors into a virtual sensor of your choice.</td>
+            <td>Energy Monitoring, Monitoring, Appliances</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Initial State Event Streamer</td>
+            <td>A Hubitat App to allow Hubitat Evolution events to be viewable inside an Initial State Event Bucket in your https://www.initialstate.com account.</td>
+            <td>Dashboards</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>HubConnect v2 Universal Drivers</td>
+            <td>Drivers provided for HubConnect v2.</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>HubConnect v2 ProBundles</td>
+            <td>ProBundles for HubConnect v2 Server, Remote and Universal Drivers.</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Google SDM API - Nest Integration</td>
+            <td>An app with coordinating drivers for monitoring and controlling Nest devices from Hubitat Elevation</td>
+            <td>Temperature & Humidity, Safety & Security, Motion Control, Cloud</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>iRobot Scheduler</td>
+            <td>iRobot Scheduler is an application and device that enables local execution and scheduling of Roomba and Brava cleaning tasks in assistance with a Raspberry Pi running Dorita980 and Rest980. This application and device works with ALL WiFi enabled Roomba and Braava devices.</td>
+            <td>Cleaning Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Google Photos Slideshow</td>
+            <td>Google Photos Slideshow is an app/driver combo to display a slideshow of images from an album your Google Photos library on a Hubitat dashboard</td>
+            <td>Cloud, Dashboards, Multimedia</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>LIFX Enhanced Drivers</td>
+            <td>LIFX Enhanced Drivers utilize the built-in LIFX support in Hubitat, providing additional capabilities</td>
+            <td>LAN, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Virtual Thermostat</td>
+            <td>A Virtual Thermostat Device for Hubitat to combine a switch and Temperature sensor into a single device</td>
+            <td>Climate Control, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Physical Light Control</td>
+            <td>A hubitat app for easily setting up physical buttons to control a group of lights</td>
+            <td>Buttons, Lights & Switches, Automations & Groups</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ikea Trådfri RGBW Bulb driver</td>
+            <td>A fully functional Hubitat RGBW driver for Ikea Bulbs</td>
+            <td>Lights & Switches, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>LockShare</td>
+            <td>Share your locks with guests, family and service worker easily!</td>
+            <td>Locks, Dashboards, Monitoring, Doors & Windows</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Warmup Connect</td>
+            <td>Full integration for WarmUp Branded thermostats including 4ie and more</td>
+            <td>Climate Control, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_myLeviton</td>
+            <td>Hubitat driver integration for My Leviton Wi-Fi enabled switches and dimmers</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_boseSoundTouch</td>
+            <td>Hubitat driver integration for Bose SoundTouch speakers</td>
+            <td>Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_unifiEvents</td>
+            <td>Hubitat driver integration for UniFi controllers that provides client status without polling</td>
+            <td>LAN, Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_unifiProtect</td>
+            <td>Hubitat driver integration for UniFi Protect controllers, cameras, doorbells, and lights</td>
+            <td>Doors & Windows, Monitoring, Presence & Location, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_switchbot</td>
+            <td>Hubitat driver integration for SwitchBot devices using the cloud-based SwitchBotAPI, including humidity/temperature sensor, bot, curtain, smart lock, contact sensor, motion sensor, and hub IR functionality</td>
+            <td>Buttons, IR & RF, Lights & Switches, Misc. Devices, Monitoring, Multi Sensors, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_sonosButtons</td>
+            <td>Hubitat integration for node-sonos-http-api.  Intended as companion functionality for the native Sonos integration on Hubitat.  Supports grouping, album art, and custom actions.</td>
+            <td>Buttons, Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_juiceBox</td>
+            <td>Hubitat integration for the JuiceNet API for JuiceBox EVSE.  Reports charging status, voltage, and power and energy delivery.</td>
+            <td>Vehicles & Transportation</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_flume</td>
+            <td>Hubitat integration for Flume water meter devices.  Reports usage by minute, hour, day, week, and month.  Also reports Smart Leak alerts.</td>
+            <td>Water</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_midea</td>
+            <td>Hubitat integration for Midea branded and Midea-supplied air conditioning units.  Provides local LAN control of compatible AC units.</td>
+            <td>Appliances, Climate Control, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_SmartHQ</td>
+            <td>Hubitat integration for SmartHQ appliances.  Provides updates for common attributes as well as automated control.</td>
+            <td>Appliances, Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_broadlink</td>
+            <td>Hubitat local-only integration for Broadlink universal remote controls.  Supports RM3 Mini, RM Pro, RM4 Mini, RM4 Pro, and other devices.</td>
+            <td>Appliances, Misc. Devices, Buttons, IR & RF, Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>hubitat_dahua</td>
+            <td>Hubitat integration for Dahua branded and Dahua-supplied cameras and doorbells.  Supports Dahua, Amcrest, and possibly other brands.</td>
+            <td>Doors & Windows, Monitoring, Presence & Location, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>hubitat_imageServer</td>
+            <td>Companion image server app for hubitat_unifiProtect and hubitat_dahua camera integrations.  Hosts snapshot images for dashboards and sends Pushover notifications.</td>
+            <td>Dashboards, Monitoring, Notifications, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Advanced Zwave Dimmer Device Handler</td>
+            <td>an Advanced Switch device handler that adds dimming and color control even if the switch does not have these capabilities. It allows switches hooked up without a load to control color bulbs from a dashboard or app</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Aeon Laundry</td>
+            <td>Laundry Monitor via Aeon Home Energy Probes, set watt levels and turns on a switch when washer or dryer is done. You put one probe on washer circuit, one od dryer.</td>
+            <td>Monitoring, Energy Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Aeon SmartStrip</td>
+            <td>Aeon SmartStrip Device Handler</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>Alexa TTS APP and Driver w volume</td>
+            <td>Alexa Voice TTS. not Written by me, but modified to add messages on cookie renew success or failure and setVolume Control</td>
+            <td>Notifications, Voice Assistants</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Battery Monitor APP</td>
+            <td>Nightly Battery Report</td>
+            <td>Monitoring, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Color Cast Weather</td>
+            <td>Monitors Weather and alerts various types of Alerts via different color lights</td>
+            <td>Monitoring, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Color Coordinator</td>
+            <td>Coordinates color changes from one switch to other switches</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>RF9500 Switch Handler</td>
+            <td>Cooper Eaton RF9500 Battery Powered Zwave button/switch driver to make it appear as a standard switch</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Dim with Me</td>
+            <td>App to make multiple dimmers follow one main dimmer</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>EZMulti aka hsm200 device handler</td>
+            <td>Motion Sensor - Temperature - Light level - Color Indicator LED - Z-Wave Range Extender - Wall Powered, Features missing in stock device handler</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Stock Zwave Garage Door Handler with switch capability added</td>
+            <td>Stock garage door handler port from smartthings with switch capablity added to work in Alexa</td>
+            <td>Garage Doors</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Garden Hue Smartapp</td>
+            <td>App originally written for Lightify Garden spots to allow color cycling and user selectable times, comes on automatically as sunset etc. but works with any color lights, can also set colors for holidays</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Homi Heiman Natural Gas Sensor Device Handler</td>
+            <td>Homi Heiman Gas sensor device handler, alerts as standard smoke as Hubitat has no natural gas capability</td>
+            <td>Monitoring, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>Hubitat Smart Alarm</td>
+            <td>A Special notication device for hubitat that gets preformated strings for various alerts and allows you to use its attributes on tiles</td>
+            <td>Notifications, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>Is My Home Secure</td>
+            <td>An App ported from smartthings that checks various door windows etc on mode change and alerts if secure or open, and will try to re-lock doors if unlocked.</td>
+            <td>Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Keen Vent LGK</td>
+            <td>Keen Smart Vent Device Handler that adds temp. and pressure monitoring not in the stock device handler, also adds switch, contact and door capabilities</td>
+            <td>Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>Hubitat Native SendMail implementation</td>
+            <td>Sendmail implemented natively in Hubitat, with or without authentication, uses internal telnet</td>
+            <td>Tools & Utilities, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>LGK APC Smart UPS Status</td>
+            <td>A Device handler to connect direct to APC Smart UPS's ie smt1500 with network cards via telnet, reports on battery level, runtime, temp. and whether on battery or power, can be use to automate shutdowns when runtime/battery is low</td>
+            <td>Monitoring, Tools & Utilities, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>LGK Virtual Garage Door APP</td>
+            <td>Port of the original app from smartthings to link a switch/relay and contact/tilt sensor together and make it look like a standard garage door control device. Includes app and drivers</td>
+            <td>Garage Doors</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Link 2 Switches</td>
+            <td>An App that Makes one switch follow another</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ct100 Thermastat Device Handler</td>
+            <td>My ct100 Thermatat device handler originally written for smartthings</td>
+            <td>Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>UtilTech Siren Device Handler</td>
+            <td>UtilTech Siren Device Handler but works with any Zwave Siren</td>
+            <td>Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Qubino Weather Station</td>
+            <td>A Port of my customized Qubino weather station device handler, from smartthings with min/max added (Currently loads but no data is coming in)</td>
+            <td>Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Roof Coil Controller</td>
+            <td>A smart app written to turn on/off a switch between two date ranges, and temperature ranges. I use it to turn on roof coil switch between dec-apr when temp. is between 30-40, but settings are customizable. Used to prevent ice dams if I forget to turn heater switch on</td>
+            <td>Lights & Switches, Safety & Security, Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Eversource ST814 Temp and humidity device handler</td>
+            <td>A custom device handler for the Eversource st814 temp/humidity device. The only one I know temp rated to go in freezers. It has 3 AA Batteries</td>
+            <td>Monitoring, Multi Sensors, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Spruce Controller</td>
+            <td>A port of the Spruce version 1 (zwave non-wifi) smartapp scheduler and device handler from smartthings to Hubitat</td>
+            <td>Valves, Irrigation</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Honeywell Total Comfort API</td>
+            <td>The older version of the honeywell API total control Thermastat driver (non child device handler) Newer one is not working for me</td>
+            <td>Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tesla App and Driver (DEPRECATED Get V3 of the app)</td>
+            <td>The smart connect app and driver for the tesla monitoring and control. Not written by me but modified by me to add variable poll time, lockout times when it stops polling to allow sleep and charage port lock/unlock custom capability</td>
+            <td>Monitoring, Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zwave water Valve device handler</td>
+            <td>A Zwave valve device handler originally written for the evb105 valve but works with any. Tested with dome and leakgopgher and leaksmart. Adds Switch Door Contol (ie open close) and contact sensor capiblity. Also light on/off control</td>
+            <td>Valves, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Enerwave ZW15SM high amperage switch device handler</td>
+            <td>Enerwave Zw15sm zwave and zwave plus high amp energy monitoring switch device handler</td>
+            <td>Lights & Switches, Energy Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zigbee White Color Temp Device Handler</td>
+            <td>A generic Zigbee white temperature contolleable bulb device handler, with custom capabilities/tiles for various temps. orignially written for lightify A19 bulbs</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tesla V3 App and Driver</td>
+            <td>The new V3 of the smart connect app and driver for the tesla monitoring and control of your autos.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tesla vehicle status and control via Tessie - App and Driver</td>
+            <td>Control and query the status of all your tesla vehicles. This is the app and driver both needed.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GE Enbrighten Z-Wave Plus Dimmer</td>
+            <td>Driver for S2 capable GE Enbrighten Dimmer</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GE Enbrighten Z-Wave Plus Switch</td>
+            <td>Driver for S2 capable GE Enbrighten Switch</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GE Z-Wave Plus Dimmer</td>
+            <td>Driver for non-S2 GE Z-Wave Plus Dimmer</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GE Z-Wave Plus Switch</td>
+            <td>Driver for non-S2 GE Z-Wave Plus Switch</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GE Z-Wave Plus Motion Dimmer Component</td>
+            <td>Driver for GE Motion Dimmer that creates separate child deivces for motion and dimmer</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GE Z-Wave Plus Motion Switch Component</td>
+            <td>Driver for GE Motion Switch that creates separate child deivces for motion and switch</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GE Z-Wave Plus Motion Switch</td>
+            <td>Driver for GE Motion Switch</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GE Z-Wave Plus Motion Dimmer</td>
+            <td>Driver for GE Motion Dimmer</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Vivint CT200 Thermostat</td>
+            <td>Driver for Vivint CT-200 Thermostat</td>
+            <td>Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GE Z-Wave Plus Motion Dimmer Combo Driver</td>
+            <td>Combo Driver for GE Z-Wavbe Plus Motion Dimmer</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Haozee Zwave 700 Multisensor</td>
+            <td>Haozee Zwave 700 Multisensor</td>
+            <td>Multi Sensors</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>GE Z-Wave Plus Motion Switch Combo Driver</td>
+            <td>Combo Driver for GE Z-Wavbe Plus Motion Switch</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Hubitat Powerley</td>
+            <td>Drivers for Powerley devices</td>
+            <td>Climate Control, Energy Monitoring, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Alarm Bridge</td>
+            <td>Alarm Bridge integration for Visonic, Elk and GE/Networx</td>
+            <td>Alarm Systems, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Heatmiser Neostat</td>
+            <td>Heatmiser Neostat integration for all Neostat devices</td>
+            <td>Temperature & Humidity, Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Fibaro Dimmer 2 FGD-212</td>
+            <td>Fibaro Dimmer 2 Module, with support for nightmode brightness</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Fibaro Double Switch FGS-222</td>
+            <td>Fibaro Double Relay Module</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Fibaro Double Switch FGS-223</td>
+            <td>Fibaro Double Switch 2 Module</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Fibaro Double Smart FGS-224</td>
+            <td>Fibaro Double Smart Module with support for secure mode and FGS-214</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sony Bravia TV Rest Control</td>
+            <td>Rest Control API for Sony Bravia TV devices</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sony Audio Control</td>
+            <td>Rest Control API for Sony Audio devices</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Hubitat Tailwind Garage Door Controller</td>
+            <td>A device driver for Tailwind IQ3 Garage Door controller that enables local API based control on the Hubitat Elevation.  This requires official firmware version 9.95 or higher.</td>
+            <td>Garage Doors</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Smarter Humidity Fan</td>
+            <td>Control an exhaust fan in response to changes in relative humidity from a sensor.</td>
+            <td>Multi Sensors, Temperature & Humidity, Lights & Switches, Shower</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Leviton ZW4SF Fan Controller</td>
+            <td>Driver for Leviton 4-Speed Fan Controller (ZW4SF)</td>
+            <td>Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>WattBox</td>
+            <td>Driver for SnapAV WattBox surge protectors supporting telnet API. Tested with WB-250-IPW-2.</td>
+            <td>Lights & Switches, Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Virtual Motion Sensor with Switch</td>
+            <td>Driver providing a virtual motion sensor controlled by a switch, with configurable inactive delay. Useful for connecting things like Motion Lighting to, for instance, a video doorbell via IFTTT.</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zooz Power Switch w/State</td>
+            <td>ZEN15 device driver with configurable state based on current power level. For use with appliances like dishwashers, washers, and gas dryers.</td>
+            <td>Appliances, Energy Monitoring, Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Companion Cube</td>
+            <td>Improve your quality of life with a faithful Companion (Aqara) Cube!</td>
+            <td>Buttons, Misc Devices, Lights & Switches, Multimedia, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Leviton Decora Smart Z-Wave Dimmer</td>
+            <td>Works with DZ6HD and DZ1KD switches</td>
+            <td>Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Leviton Decora Smart Z-Wave Plug-In Dimmer</td>
+            <td>Works with DZPD3-2BW outlet</td>
+            <td>Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Actron Connect Integration</td>
+            <td>Integration for Actron Connect</td>
+            <td>Cloud, Temperature & Humidity, Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Motion2Contact</td>
+            <td>Mirrors a motion sensor to a contact sensor</td>
+            <td>Alarm Systems, Monitoring, Motion Control, Multi Sensors</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Contact2Motion</td>
+            <td>Mirrors a contact sensor to a virtual motion sensor</td>
+            <td>Alarm Systems, Monitoring, Motion Control, Multi Sensors</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Luxor Lighting Controller</td>
+            <td>An app and device drivers to control Luxor Lighting Controllers (LXZD, LXZDC, LXTWO)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Hubitat Z-Wave Mesh Details</td>
+            <td>A Tool to provide a way to explore Z-Wave Mesh Details. This tool can answer questions like:
+
+Which devices are acting as repeaters?
+How many devices are routing through a particular device?
+Which and How many devices are in a FAILED state?
+What devices are neighbors for a given device?</td>
+            <td>Monitoring, ZWave, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Advanced vThermostat</td>
+            <td>Advanced vThermostat is a Hubitat Device Type Handler that will help create a proper virtual thermostat device.</td>
+            <td>Temperature & Humidity, Tools & Utilities, Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Honeywell Home - Lyric and T Series</td>
+            <td>Honeywell Home Intergraion Lyric and T Series Devices (cloud)</td>
+            <td>Temperature & Humidity, Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>August Home</td>
+            <td>App and Driver for August Home</td>
+            <td>Locks</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sinope Neviweb Hub GT125</td>
+            <td>Added integration for Sinope Neviweb Hub GT125</td>
+            <td>Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>HubitatWizLightDriver</td>
+            <td>Device handler for Philips Wiz Color Bulbs</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>HubitatPixelblazeDriver</td>
+            <td>Device handler for the Pixelblaze addressable LED controller</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Presence Sensor</td>
+            <td>(Android ONLY) Hubitat Integration for Presence Sensor app</td>
+            <td>Presence & Location, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zooz Switches Advanced Drivers</td>
+            <td>Zooz Switch & Dimmer drivers with advanced features and settings: <br>ZEN21, ZEN22, ZEN23, ZEN24, ZEN26, ZEN27, ZEN71, ZEN72, ZEN73, ZEN74, ZEN76, ZEN77, ZEN30</td>
+            <td>Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Zooz Sensors Advanced Drivers</td>
+            <td>Zooz Sensor drivers with advanced features and settings: <br>ZSE11, ZSE18, ZSE40, ZSE41, ZSE42, ZSE43, ZSE44, ZSE70</td>
+            <td>Multi Sensors, Motion Control, Temperature & Humidity, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zooz Relays Advanced Drivers</td>
+            <td>Zooz Relay drivers with advanced features and settings: <br>ZEN16, ZEN17, ZEN51, ZEN52</td>
+            <td>Relays, Garage Doors, Lights & Switches, Misc. Devices, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zooz Plugs Advanced Drivers</td>
+            <td>Also works on many other Z-Wave power metering plugs! <br>Zooz Plug drivers with advanced features and settings: <br>ZEN04, ZEN05, ZEN14, ZEN15, ZEN20, ZEN25</td>
+            <td>Energy Monitoring, Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zooz Modules Advanced Drivers</td>
+            <td>Zooz Misc Module drivers with advanced features and settings: <br>ZEN53, ZEN54, ZEN55</td>
+            <td>Lights & Switches, Safety & Security, Window Coverings, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zooz Scene Controllers Advanced Drivers</td>
+            <td>Zooz Scene Controller drivers with advanced features and settings: <br>ZEN37</td>
+            <td>Lights & Switches, Buttons, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zooz ZEN31 RGBW Advanced Driver</td>
+            <td>Zooz ZEN31 RGBW Dimmer driver with advanced features and settings</td>
+            <td>Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zooz ZAC36 Titan Valve Actuator</td>
+            <td>Zooz ZAC36 Titan Valve Actuator driver with all advanced features and settings</td>
+            <td>Valves, Water, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zooz ZAC38 Range Extender</td>
+            <td>Zooz ZAC38 Range Extender and Power Outage Monitor driver with all advanced features and settings</td>
+            <td>Repeaters & Extenders, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>SmartStart Manager App</td>
+            <td>App to manage the Z-Wave SmartStart devices list from the hub</td>
+            <td>ZWave, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Universal Z-Wave Drivers</td>
+            <td>Package of Universal Drivers and Utilities for modern Z-Wave devices</td>
+            <td>Tools & Utilities, Relays, Lights & Switches, Buttons, Misc. Devices, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Sonos Minimum Volume Tracker</td>
+            <td>Track the minimum volume of all selected Sonos speakers.</td>
+            <td>Tools & Utilities, Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>AlertMe Drivers from BirdsLikeWires</td>
+            <td>Drivers for devices based upon the original AlertMe platform.</td>
+            <td>Buttons, Doors & Windows, Energy Monitoring, Lights & Switches, Monitoring, Presence & Location, Repeaters & Extenders, Safety & Security, Temperature & Humidity, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Aurora Drivers from BirdsLikeWires</td>
+            <td>Drivers for Aurora devices.</td>
+            <td>Buttons, Lights & Switches, Repeaters & Extenders, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>General Drivers from BirdsLikeWires</td>
+            <td>Virtual Switchable Presence and other utility drivers.</td>
+            <td>Tools & Utilities, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Hildebrand Glow Drivers from BirdsLikeWires</td>
+            <td>Consumer access device drivers for SMETS1 and SMETS2 UK smart meters.</td>
+            <td>Energy Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Hive Drivers from BirdsLikeWires</td>
+            <td>Drivers for Hive devices.</td>
+            <td>Climate Control, Temperature & Humidity, Water Heater, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>IKEA Symfonisk and Tradfri Drivers from BirdsLikeWires</td>
+            <td>Drivers for IKEA Tradfri devices.</td>
+            <td>Buttons, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Lidl Drivers from BirdsLikeWires</td>
+            <td>Drivers for devices based on Lidl's SilverCrest platform.</td>
+            <td>Lights & Switches, Repeaters & Extenders, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Salus Drivers from BirdsLikeWires</td>
+            <td>Drivers for Salus devices.</td>
+            <td>Energy Monitoring, Lights & Switches, Repeaters & Extenders, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Samotech Drivers from BirdsLikeWires</td>
+            <td>Drivers for Samotech devices.</td>
+            <td>Lights & Switches, Repeaters & Extenders, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Drivers from BirdsLikeWires</td>
+            <td>Drivers for devices based on the Tuya platform.</td>
+            <td>Lights & Switches, Repeaters & Extenders, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Xiaomi Aqara and Mijia Drivers from BirdsLikeWires</td>
+            <td>Drivers for Xiaomi Aqara and Mijia devices.</td>
+            <td>Buttons, Lights & Switches, Temperature & Humidity, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zigbee2MQTT Routing from BirdsLikeWires</td>
+            <td>Zigbee2MQTT Routing Driver.</td>
+            <td>MQTT, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Virtual Switch Enabler</td>
+            <td>Turn a switch on/off only when enabled</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>Adhan Player</td>
+            <td>Plays the Adhan on the selected speaker(s) at the appropriate prayer times.</td>
+            <td>Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Eight Sleep (Connect)</td>
+            <td>Connect your Eight Sleep Mattress</td>
+            <td>Climate Control, Misc. Devices, Presence & Location, Sleep</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Epson Projector</td>
+            <td>Epson Projector Driver</td>
+            <td>LAN, Misc. Devices, Multimedia</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Motion in Window</td>
+            <td>Create a motion sensor that is triggered active after X motion events in Y seconds</td>
+            <td>Motion Control</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zemismart Zigbee Blind</td>
+            <td>Zemismart zigbee blind device driver</td>
+            <td>Window Coverings, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Xiaomi Aqara Mijia Sensors and Switches</td>
+            <td>Xiaomi Aqara Mijia Sensors and Switches Combined Driver</td>
+            <td>Multi Sensors</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Fibaro FGR-223 Roller Shutter 3</td>
+            <td>Fibaro FGR-223 Roller Shutter 3 Driver</td>
+            <td>Window Coverings</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Lighting Schedules</td>
+            <td>Schedule on/off timings for groups of switches/lights by simply typing in the timings</td>
+            <td>Lights & Switches, Zigbee, Timers</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee dimmer modules</td>
+            <td>Driver for Tuya 1-gang and 2-gang dimmer modules</td>
+            <td>Lights & Switches, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>StelPro Ki Zigbee Thermostat</td>
+            <td>stelpro ki zigbee thermostat driver</td>
+            <td>Climate Control, Temperature & Humidity, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Personal Logger</td>
+            <td>Log Personal Events</td>
+            <td>Cloud, Health & Fitness, Tools & Utilities, Voice Assistants</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Zwave Configuration Explorer</td>
+            <td>Test and explore the configuration parameters of a z-wave device</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>ddwrt-router-driver</td>
+            <td>A driver for your dd-wrt router, to perform reboot.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>LIFX Master app and drivers</td>
+            <td>LIFX Lan Protocol app and drivers for Hubitat Elevation</td>
+            <td>Lights & Switches, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>Telnyx SMS</td>
+            <td>Telnyx SMS allows you to send SMS messages from Rule Machine, webCoRE, and the HE device pages.</td>
+            <td>Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Springs Window Fashions Shade Drivers</td>
+            <td>Drivers specifically for Sheer and Roller Shade window coverings. Fixes the issue where the standard drivers report 'partially open' when they are opaque and 'closed' when actually sheer.</td>
+            <td>Doors & Windows, Window Coverings, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Pushcut</td>
+            <td>Integrate with the Pushcut ecosystem.</td>
+            <td>Tools & Utilities, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Home Assistant Device Bridge</td>
+            <td>Utilize your existing Home Assistant devices in Hubitat Elevation automations.</td>
+            <td>Doors & Windows, Garage Doors, Lights & Switches, Misc. Devices, Temperature & Humidity, Tools & Utilities, Water</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Notification Tile Device</td>
+            <td>Device driver that can serve as a destination for notifications. Formats the notifications for display on an attribute tile.</td>
+            <td>Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Dashboard Variable Device</td>
+            <td>This is a psuedo Global Variable Connector that works with RM or webCoRE to provide a bi-directional interface to the Variable Tile.  Was written primarily to give webCoRE users a method of working with the variable tile without requiring the creation of an RM global variable and connector.</td>
+            <td>Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Hubitat Ping Device</td>
+            <td>Device driver that provides a wrapper for the Hubitat Ping endpoint.  sendPing command accepts an IPv4 sring and will send it to the hub, which will do 5 ICMP requests.  Optionally, can be set through the preferences to repeat the ping command on a specified interval.  Returns: percentLoss, avg, min, max, mdev, pingReturn, and presence.  Implements capabilities Acutator, Configuration, and Presence.</td>
+            <td>Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Device Details Display</td>
+            <td>Simple application that displays the capabilities, attributes (summary and detail, commands (summary and detail) and device data for devices selected.  Allows for the quick comparison of multiple devices.</td>
+            <td>Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Moon Phase Device</td>
+            <td>Device driver to calculate the moon phase for a given or current date/time.  Attributes include a moon phase text string, the a moon phase number (percentage, in decimal format, that the given time/date is through the lunar cycle, and a generated tile string.  Driver optionally will automatically update the attributes at 1 second past midnight to keep the phase current, and allows for an path to an alternate set of tile icons (i.e. hub file system - http://hubIpAddress/local/).</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Even Day Switch</td>
+            <td>Device driver creates a virtual switch that is set on/off based on whether the day of the year is even or odd. To handle end of year processing the driver can optionally switch the even/odd on/off to ensure that the every other day on/off is maintained.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Hubitat Hub Information Driver Aggregation</td>
+            <td>Application allows multiple instances of the Hub Information Driver to be displayed in one space. Also permits the creation of a customized html attribute that can be displayed on a dashboard attribute tile.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Hub Monitor</td>
+            <td>Application allows monitoring of multiple instances of the Hub Information Driver, and will generate notifications for temperature, database size, free memory and IP address changes.</td>
+            <td>Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Hub Variable Sync</td>
+            <td>Application allows the synchronization of hub variables across multiple hubs.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Custom Device Note</td>
+            <td>Application allows for the addition of custom notes to devices in the Data section under the Device Details on the device page.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SynAccess PDU Driver</td>
+            <td>Driver that supports the usage of a SynAccess PDU through the telnet interface.  Driver creates a child device for each outlet to enable individual power control.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Device Data Item Display</td>
+            <td>Provides a mechanism for displaying data item values across multiple devices.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>File Manager Device</td>
+            <td>Device Driver to allow reading, writing, and appending of text based files in Hubitat\'s Local File Manager.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Web Scraper Device</td>
+            <td>Scrapes a web site for a search string and returns data based on offset of the search.  Can be run as a one time or a periodic search</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>File Manager for Extended Character Sets</td>
+            <td>Provides File Manager support for text files containing extended character sets.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Device Data Editor</td>
+            <td>Quick Editor for the items in the Data area on the Device Page.  Also permits the addition of new items into the data section.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Daily Reminder</td>
+            <td>App uses a simple text file as input to generate daily reminder notices.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Tile Template Generator</td>
+            <td>Creates a template file based on a device driver's exposed attributes. Templates can be used to create dashboard tiles using Tile Template Device Manager.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Tile Template Device Manager</td>
+            <td>Manages the merging of data from a device driver, and an assigned template to create an HTML output attribute that can be used on the Dashboard.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Tile Multi-Device Template Manager</td>
+            <td>Manages the merging of data from multiple device drivers, and an assigned template to create an HTML output attribute that can be used on the Dashboard.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Nexia Thermostat Manager</td>
+            <td>Port of the ST Nexia Thermostat Manager.  Known work with the XL850 and XL824 Thermostat; may work with any thermostat running off of the TraneHome.com cloud.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Danfoss Ally Master</td>
+            <td>Provides integration with the Danfoss Ally Thermostats and Room Sensors.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Advanced Honeywell T6 Pro</td>
+            <td>Advanced driver for the Honeywell T6 Pro Z-Wave thermostat - the baseline code is from v1.2 bcopeland driver.  Provides access to all 42 device parameters, Clock synchronization, and Power Source Monitoring, in addition to the standard thermostat functions</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Air Things View Plus API Integration</td>
+            <td>Provides the interface and device(s) to integrate the Air Things (aka AirThings) View Plus hub and sensors with Hubitat(TM).</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>HPM Manifest Generator</td>
+            <td>Developers utility that automates the generation of an HPM Manifest, and the merge entry for the Repository.  </td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Hub Failover Manager</td>
+            <td>Hubitat® Elevation Higher Availability (HE-Ha)  For homes where automation of the environment has become the expected condition it is highly disruptive when a key component fails. In the Hubitat® environment, the loss of the hub is significant, and while the Hub Protection service provides for a replacement hub and permits restoration of the hub’s data and radios there is a delay before the restoration can occur due to shipping. In the ideal world, a secondary hub would be on hot standby and would automatically assume control of the environment if it detected a failure (loss of communication in the primary hub).</td>
+            <td>Monitoring, Safety & Security, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zigbee-ZWave Radio Toggle Buttons</td>
+            <td>Provides a set of buttons to enable/disable the Zigbee/ZWave radios.</td>
+            <td>Buttons, Zigbee, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Message Rotator Tile Device</td>
+            <td>Message Rotator Tile device allows for multiple messages to be stored via RM, webCoRE, manually, etc. and then rotated to display on an attribute tile.</td>
+            <td>Dashboards</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Room Information Device</td>
+            <td>Provides a JSON summary of all Rooms and their associated devices and images.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Hub Information Driver v3</td>
+            <td>Rewrite of the original Hub Information Driver.  Driver includes 40+ attributes related to the operation and general fitness of the hub.</td>
+            <td>Dashboards, Misc. Devices, Monitoring, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>File Manager Backup & Restore</td>
+            <td>Allows for the creation and restore of a compressed backup of all files contained in the Hub's local File Manager </td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Power Outage Manager</td>
+            <td>Monitors devices with Power Source capability and initiates actions when the powerSource attribute switches from battery to mains indicating a power outage.  Can also initiate actions when power is restored.</td>
+            <td>Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Node Red Server Information Driver</td>
+            <td>Node Red Server Information Driver creates a virtual device to accept and store input from node-red-contrib-device-stat, node-red-contrib-cpu.  </td>
+            <td>Dashboards, Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Sensor Groups+ (Resurrected)</td>
+            <td>App for grouping sensors</td>
+            <td>Automations & Groups, Multi Sensors, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>Hubitat Log Display Tile</td>
+            <td>Creates a dashboard tile to display Hubitat Log information</td>
+            <td>Dashboards</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Device Attribute Iterative Storage </td>
+            <td>Maintains a set number of iterations of attribute and computed min/max/avg values in the Hubitat Local File Manager.</td>
+            <td>Monitoring, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>CSV Visualization</td>
+            <td>CSV Visualization - Local graphing of CSV files uitlizing the chart.js library</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Hub Image Proxy</td>
+            <td>Serves files from the hub File Manager, thus permitting images and text files on the hub to be viewed//referenced via the cloud interface.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Hub Updater v2</td>
+            <td>Hub Updater v2 creates a virtual device that allows a single button push to request HE firmware updates for multiple HubMeshed hubs.</td>
+            <td>Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Govee Effect Player</td>
+            <td>Govee Effects Player</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Networx Alarm System Bridge</td>
+            <td>Alarm bridge integration for Networx/GE/Interlogix alarms</td>
+            <td>Alarm Systems, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Neptune Systems Apex</td>
+            <td>Drivers for monitoring a Neptune Systems Apex aquarium controller</td>
+            <td>LAN, Pets & Animals, Monitoring, Misc. Devices, Valves, Water</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tesla Drivers</td>
+            <td>Drivers for monitoring a Tesla Powerwall</td>
+            <td>Energy Monitoring, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Unifi Drivers</td>
+            <td>Drivers for integrating Ubiquiti's Unifi Network API</td>
+            <td>LAN, Misc. Devices, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Blink Drivers</td>
+            <td>This is a set of drivers to use with the Blink API</td>
+            <td>Cloud, Misc. Devices, Monitoring, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Unifi Protect Drivers</td>
+            <td>Drivers for integrating Ubiquiti's Unifi Protect API</td>
+            <td>LAN, Misc. Devices, Monitoring, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>FireBoard</td>
+            <td>Drivers for integrating FireBoard devices using the FireBoard Cloud API</td>
+            <td>Cloud, Monitoring, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>WSM4Hubitat</td>
+            <td>Drivers to access a variety of Weather Services such as the UK Met Office, US Weather.gov, OpenWeather, Weather API, Weather Underground, and World Weather Online</td>
+            <td>Cloud, Monitoring, Temperature & Humidity, Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>WeatherFlow</td>
+            <td>Drivers to access the WeatherFlow API</td>
+            <td>Cloud, Monitoring, Temperature & Humidity, Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ambient Ecowitt Weather</td>
+            <td>Drivers for using the Ambient API, Ambient Local, and Ecowitt methods of getting weather station data</td>
+            <td>Cloud, LAN, Monitoring, Temperature & Humidity, Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Neurio</td>
+            <td>Driver for getting data directly from a Neurio energy monitor</td>
+            <td>Energy Monitoring, LAN, Misc. Devices, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Silvercrest Doorbell HG06668</td>
+            <td>This is a driver for the silvercrest doorbell (or Heiman doorbell)</td>
+            <td>Buttons</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>HeatIt Z-Push Button 8 driver</td>
+            <td>A Hubitat driver for HeatIt Z-Push Button 8 control device</td>
+            <td>Buttons, Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Google Calendar, Task, and Gmail Search and Gmail Notification Device</td>
+            <td>Google Calendar, Task, and Gmail Search integrates Hubitat Elevation with Google for automations based on items found.  Included Gmail Notification Device provides Gmail email notifications from Hubitat Elevation.</td>
+            <td>Lights & Switches, LAN, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Twilio SMS and Voice Notifications</td>
+            <td>Send SMS and initiate voice call notifications via the Plivo.</td>
+            <td>LAN, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Plivo SMS and Voice Notifications</td>
+            <td>Send SMS and initiate voice call notifications via the Plivo.</td>
+            <td>LAN, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>HTTP Button Pad Driver</td>
+            <td>HTTP Url's on a multi button virtual device</td>
+            <td>Buttons</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Broadlinkgo Multi Device System</td>
+            <td>Populate all your commands as button devices from the broadlinkgo system</td>
+            <td>IR & RF</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Airfoil Drivers</td>
+            <td>Speaker Drivers for the Airfoil Api</td>
+            <td>Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Unified Thermostat</td>
+            <td>Integrates Mitsubishi Electric Wi-Fi Thermostat platforms in Australia / NZ, Europe and the U.S. using a single unified set of drivers.  Simply select your platform, enter your credentials and start using your thermostat(s) in rules, dashboards and applications.  Multiple units are supported, detected automatically during the authentication / setup process.  There is scope for expanding this to support other thermostats in the future, benefiting from the existing structure and logic built to integrate Mitsubishi platforms.</td>
+            <td>Climate Control, Temperature & Humidity, Cloud, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Virtual Battery Sensor</td>
+            <td>Virtual Battery Sensor driver for storing current battery reading for a device</td>
+            <td>Monitoring, Energy Monitoring, Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ecowitt WiFi Gateway</td>
+            <td>Ecowitt Wifi Gateway driver for Hubitat Elevation</td>
+            <td>Monitoring, Irrigation, LAN, Temperature & Humidity, Water, Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>BoM Radar Images Data File</td>
+            <td>Australia Bureau of Metereology Rain Radar Images Data File</td>
+            <td>Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Image Cycle</td>
+            <td>Cycles images using a locally stored HTML file and listing of image URLs in local JSON file</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Status Avatar</td>
+            <td>Displays an image with decorations to indicate status information</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Album Art Tile</td>
+            <td>Allows for the displays of an album cover image on a dashboard tile by looking up a artist and album name on the MusicBrainz and Cover Art Archive online services</td>
+            <td>Dashboards, Multimedia, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>SensorPush Gateway Driver</td>
+            <td>Retrieves SensorPush temperature and humidity sensor readings from the SensorPush cloud storage</td>
+            <td>Integrations</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>TV HeadEnd EPG Importer</td>
+            <td>Retrieves current EPG details from an instance of TV HeadEnd, typically installed on a raspberry pi with a TV Hat</td>
+            <td>Integrations</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Simple CSS Editor</td>
+            <td>A pop-up tile and dashboard styling editor</td>
+            <td>Convenience</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Mobile Controller</td>
+            <td>Send and receive information and between your HE hub and mobile devices such as phones and tablets, along with initiating commands.  Currently only Android devices are supported, using Tasker and associated Tasker plugins.</td>
+            <td>Convenience</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>App List (Beta)</td>
+            <td>Produce a JSON string with a listing of Apps installed on the local HE hub, including parent / child relationships</td>
+            <td>Convenience</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Package Evalogik</td>
+            <td>Package for Evalogik</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Package Minoston</td>
+            <td>Package for Minoston</td>
+            <td>Doors & Windows, Temperature & Humidity, Lights & Switches, Energy Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Package NewOne</td>
+            <td>Package for NewOne</td>
+            <td>Temperature & Humidity, Lights & Switches, Energy Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Universal Virtual Device Switch uDTH - For Alexa, IFTTT, WebHooks, HSM, and other integrations</td>
+            <td>Virtual Switch with capabilities to integrate almost any device using Alexa, IFTTT, WebHooks, Hubitat Safety Monitor (HSM), and other integrations. Lite version has Switch, Contact, Motion, and Presence sensor capabilities, perfect for Alexa and IFFTT integrations. Super version has Switch, Contact, Motion, Presence, Smoke, Water, Sound, Acceleration, Shock, Sleep, Battery, Filter, Tamper, Illuminance, Valve, Lock, Door Control, and Button sensor capabilities. Has Auto-Off ability to automtically turn the device Off after a certain amount of time. Has Force Status Update ability to always send an event regardless of the device's current status. Ie If the device is On, and an app tries to turn it On, it will still Send/Do the On event.</td>
+            <td>Alarm Systems, Buttons, Cloud, Lights & Switches, Locks, Misc. Devices, Motion Control, Presence & Location, Safety & Security, Sleep, Valves, Water</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Virtual ip presence sensor</td>
+            <td>Is that machine alive? A wrapper for Hubitat. Allows you to create a presence sensor based on an IP health of a remote host.</td>
+            <td>Cloud, LAN, Monitoring, Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Pixela Driver</td>
+            <td>Driver to use pixela from hubitat, and easy access to the graphs on dashboard</td>
+            <td>Dashboard, Graph, Tracking</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Moen Flo Smart Shutoff</td>
+            <td>LEGACY: Hubitat Integration for the Moen Flo Smart Shutoff. This is the original single-file driver. Updates will on be made to fix issues. New features will only be added to the Moen FLO Device Manager. This is NOT required for the Moen FLO Device Manager package</td>
+            <td>Water, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Moen FLO Device Manager</td>
+            <td>The device manager enables quick-setup and shared credentials for all your Moen FLO devices.<br>Hubitat Integration for the Moen Flo Devices (Smart Shutoff and Smart Shutoff Valve). See readme at https://dcmanjr.com/flo</td>
+            <td>Water, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Shabbat and Holiday Scheduler</td>
+            <td>Schedule automatic Location Mode changes for Shabbat and holidays</td>
+            <td>Automations & Groups, Lights & Switches, Presence & Location, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Sunsa Wands</td>
+            <td>Driver for Sunsa Wands</td>
+            <td>Window Coverings</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>QolSys IQ Alarm Panel</td>
+            <td>Driver for QolSys IQ Alarm Panels</td>
+            <td>Alarm Systems, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tailwind Garage Door Controller</td>
+            <td>Integration for the Tailwind iQ3 Garage Door Controller</td>
+            <td>Garage Doors</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Squeezebox Connect</td>
+            <td>Integrates a Squeezebox Server (LMS) instance into Hubitat.</td>
+            <td>LAN, Multimedia, Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Miele Integration</td>
+            <td>Integrates Miele@home devices into Hubitat.</td>
+            <td>Appliances, Cloud</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>AeotecHEMGen5 Driver</td>
+            <td>A more preference filled alternative driver.</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Basic Z-Wave tool</td>
+            <td>Set Device Parameters, manually.</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>InfluxDB-Logger</td>
+            <td>Log Hubitat device states to an InfluxDB database</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>MyQ Garage Door Integration 2023</td>
+            <td>Integrates MyQ garage doors into your Hubitat system</td>
+            <td>Cloud, Doors & Windows, Garage Doors</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Meteorological Seasons</td>
+            <td>A need developed for me to be able to set Rules and automations within my Hubitat environment that would allow me to gain control seasonally.  Meteorological Seasons is a driver that provides, when installed correctly on a Hubitat platform, a selectable device driver. This driver, when used during creation of a virtual device, creates a clean way to bridge seasons to dashboard tiles, variables for Rules and other nice features  as well.  Now useful for both hemispheres!</td>
+            <td>Dashboards, Monitoring, Timers, Weather</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Virtual Inverse-able Switch w-autoOff and Toggle</td>
+            <td>This switch will show ON but will have a device state of Off if the preference is set to Reverse Actions. Useful for apps that allow a switch to control on-off state but you want to reflect the app not the switch</td>
+            <td>Dashboards, Monitoring, Lights & Switches, Virtual, AutoOff, Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zigbee eWeLink-CMARS-Seedan Outlet</td>
+            <td>Zigbee eWeLink-CMARS-Seedan Outlet is a driver that is modified from the great code of Markus Liljergren of *OhLa Lab* fame -see https://oh-lalabs.com/. Modifications include ewelink fingerprint and more </td>
+            <td>Dashboards, Monitoring, Lights & Switches, Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Date & Time Parser</td>
+            <td>A virtual device driver that seperates out date and time components into chunks.  Useful for check day of the week, hour of the day etc. in rules </td>
+            <td>Date, Timers, Virtual, Misc. Devices</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Virtual Presence Contact and Switch</td>
+            <td>A virtual device driver that ties Presence, Sensor and Switch (Present/Open/On) capabilities.  Useful for connecting to Alexa, or having Presence give an on/off state </td>
+            <td>Dashboards, Monitoring, Lights & Switches, Virtual, AutoOn, Misc. Devices, Presence, Open/Closed</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Inverse Link Two Switches</td>
+            <td>A Parent App with children to set two switches to always be inversed to each other.  Can be disabled with its own switch.  Useful for folks who hate boolean! </td>
+            <td>Dashboards, Monitoring, Lights & Switches, Virtual, AutoOn, Misc. Devices, Presence, Open/Closed</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Lutron Aurora Dimmer Driver</td>
+            <td>Similar to the official driver, except it contains the ability to set the level and customize the push button.</td>
+            <td>Buttons, Lights & Switches, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Moes ZSS-ZK-THL_TS0222</td>
+            <td>Moes ZSS-ZK-THL illuminance, temperature, humidity sensor model TS0222 (_TYZB01_kvwjujy9) driver for Hubitat</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Scene Switch TS004F</td>
+            <td>Tuya TS004F driver for Hubitat Elevation</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee Metering Plug</td>
+            <td>Tuya Zigbee Metering Plug driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya ZigBee Vibration Sensor</td>
+            <td>Tuya ZigBee Vibration Sensor TS0210 driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya NEO Coolcam Zigbee Water Leak Sensor</td>
+            <td>Tuya NEO Coolcam Zigbee Water Leak Sensor driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Temperature Humidity Illuminance LCD Display with a Clock</td>
+            <td>Tuya Temperature Humidity Illuminance LCD Display with a Clock driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Smart Siren Zigbee</td>
+            <td>Tuya Smart Siren Zigbee driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee Valve</td>
+            <td>Tuya Zigbee Water/Gas Valve driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee Garage Door Opener</td>
+            <td>Tuya Zigbee Garage Door Opener driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Aqara P1 Motion Sensor</td>
+            <td>Works with Aqara P1 Motion Sensor RTCGQ14LM, Aqara FP1 Human Presence Detector RTCZCGQ11LM, Aqara FP1E Human Presence Detector RTCZCGQ13LM, RTCGQ13LM, GZCGQ11LM, GZCGQ01LM, RTCGQ01LM, RTCGQ11LM, RTCGQ15LM</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Multi Sensor 4 In 1 (PIR and mmWave Radars)</td>
+            <td>Tuya PIR Motion Sensors and mmWave Radars - driver for Hubitat Elevation hub</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Wall Thermostat</td>
+            <td>Tuya Wall Thermostat - AVATTO, Moes, BEOK - driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SiHAS Multipurpose Sensor USM-300-ZB</td>
+            <td>SiHAS Multipurpose Sensor USM-300-ZB - driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee Smoke Detector</td>
+            <td>Tuya Zigbee Smoke Detector - driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SiHAS Zigbee Power Meter PMM-300-Z</td>
+            <td>SiHAS Zigbee Power Meter and Energy Monitor PMM-300-Z(1,2,3) - driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SiHAS People Counter CSM-300-ZB (V2)</td>
+            <td>SiHAS People Counter CSM-300-ZB (V2) - driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SiHAS ZigBee Lock Without Codes DLM-300-Z</td>
+            <td>SiHAS ZigBee Lock Without Codes- driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SiHAS Dual Motion Sensor DMS-300Z</td>
+            <td>SiHAS Dual Motion Sensor DMS-300Z - driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee Contact Sensor++ w/ healthStatus</td>
+            <td>Tuya Zigbee Contact Sensor++ w/ healthStatus - driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Device Health Status</td>
+            <td>Device Health Status - app for Hubitat Elevation hub</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee Light Sensor</td>
+            <td>Tuya Zigbee Light Sensor - driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>VINDSTYRKA Air Quality Monitor</td>
+            <td>VINDSTYRKA Air Quality Monitor - driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee Fingerbot</td>
+            <td>Tuya Zigbee Fingerbot - driver for Hubitat Elevation hub</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Matter Advanced Bridge</td>
+            <td>Matter Advanced Bridge - brings to HE the Tuya, Aqara, Hue, Switchbot Zigbee devices via Matter</td>
+            <td>Tools & Utilities, Matter</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tuya Zigbee Control Screen Panel</td>
+            <td>T3E - Tuya Zigbee Control Screen Panel</td>
+            <td>Buttons, Misc. Devices, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zigbee Button Dimmer</td>
+            <td>Zigbee Buttons Dimmers</td>
+            <td>Buttons, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Aqara Cube T1 Pro</td>
+            <td>Aqara Cube T1 Pro (MFCZQ12LM) is fun! </td>
+            <td>Buttons, Misc. Devices, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee mmWave Sensor</td>
+            <td>Tuya mmWave sensors - new driver to replace the Tuya 4 In 1 driver. W.I.P.</td>
+            <td>Zigbee, Motion Control</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zemismart ZigBee Wall Switch Multi-Gang</td>
+            <td>Muxa's popular Zemismart ZigBee Wall Switch Multi-Gang. Works with Tuya models TS0001,TS0002, TS0003, TS0004, TS0011, TS0012, TS0013, TS0115, TS011F</td>
+            <td>Zigbee, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Moes ZigBee Wall Switch 1/2/3-Gang</td>
+            <td>Martin's popular Moes ZigBee Wall Switch 1/2/3-Gang driver. Works with Tuya switches model TS0601</td>
+            <td>Lights & Switches, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee Tank Level Monitor</td>
+            <td>Tuya Zigbee Tank Level Monitor</td>
+            <td>Misc. Devices, Monitoring, Pools & Spas, Water, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Tuya Zigbee Chlorine Meter</td>
+            <td>Tuya Zigbee Chlorine Meter</td>
+            <td>Misc. Devices, Monitoring, Pools & Spas, Water, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Tuya Zigbee Rain Sensor</td>
+            <td>Tuya Zigbee Rain Sensor</td>
+            <td>Climate Control, Irrigation, Monitoring, Multi Sensors, Water, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zigbee TRVs and Thermostats</td>
+            <td>Zigbee Thermostats and TRVs - Aqara, Tuya, Sonoff, Sunricher, Namron, ....</td>
+            <td>Climate Control, Energy Monitoring, Temperature & Humidity, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Hubitat Linktap MQTT Driver</td>
+            <td>Hubitat driver for smart watering devices from Linktap with local network integration through the use of a MQTT broker</td>
+            <td>Irrigation, Water, Valves</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Home Connect Integration</td>
+            <td>Integration for Home Connect appliances [Bosch, Thermador and Gaggenau]</td>
+            <td>Cloud, Appliances</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Fakro Window Driver</td>
+            <td>Fakro Z-Wave Window Driver</td>
+            <td>ZWave, Doors & Windows</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Aeotec Eurotronic Spirit eTRV Driver</td>
+            <td>Aeotec Eurotronic Spirit eTRV Driver</td>
+            <td>ZWave, Climate Control, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Heiman Z-Wave Smoke Detector Driver</td>
+            <td>Heiman Z-Wave Smoke Detector Driver</td>
+            <td>ZWave, Alarm Systems, Monitoring, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Heiman Zigbee Smoke Detector Driver</td>
+            <td>Heiman Zigbee Smoke Detector Driver</td>
+            <td>Zigbee, Alarm Systems, Monitoring, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Heiman Zigbee CO Detector Driver</td>
+            <td>Heiman Zigbee CO Detector Driver</td>
+            <td>Zigbee, Alarm Systems, Monitoring, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Secure SRT321 Thermostat</td>
+            <td>Secure IQE Horstmann SRT321 RT321 HRT4-ZW Room Thermostat Driver</td>
+            <td>ZWave, Climate Control, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tesla Powerwall Manager</td>
+            <td>Create advanced Tesla Powerwall schedules, control, monitor, and integrate your Powerwall with Hubitat (and SmartThings).</td>
+            <td>Energy Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Demand Manager</td>
+            <td>Electricity demand management for those with utility companies that levy demand charges. Monitor 30/60 minute demand usage and control devices to reduce peak peak demand costs.</td>
+            <td>Energy Monitoring, Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Amcrest ASH26</td>
+            <td>Light controls for Amcrest ASH26 outdoor security camera</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>AcuRite Weather Station</td>
+            <td>Access to AcuRite sensor data via myacurite.com</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Zigbee Driver for Sinope device</td>
+            <td>Drivers to take some features that are not included into the default driver, as the outside temperature or the energy meter</td>
+            <td>Climate Control, Energy Monitoring, Repeaters & Extenders, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Shabbat and Jewish holiday info driver</td>
+            <td>Gain info on Shabbat and Jewish Holiday start and end days/times, for use in automations.</td>
+            <td>Automations & Groups, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>iAqualink Driver</td>
+            <td>iAqualink driver to integrate pool/spa control into Hubitat</td>
+            <td>Pools & Spas</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>NTP Client</td>
+            <td>NTP Client to get time from local NTP Server</td>
+            <td>LAN, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tasmota Sync Drivers</td>
+            <td>Tasmota Sync Drivers - Realtime & Native Synchronisation between Tasmota and Hubitat.</td>
+            <td>Lights & Switches, Temperature & Humidity, Misc. Devices, Tasmota</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Precipitation and Weather Monitor for NWS Data</td>
+            <td>Gathers hourly precipitation and other weather data from your nearest airport and makes it available to you via a device driver for access via rules. No codes or API keys needed. Provides rolling 1,3,6,12,24 hr totals and up to 7 days of precipitation history. Also provides temperature, humidity, dewpoint, pressure, wind, weather, sky conditions and visibility data.</td>
+            <td>Irrigation, Weather, Temperature & Humidity, Water</td>
+        </tr>
+        
+        <tr>
+            <td>Dashboards</td>
+            <td>Tile Builder for Hubitat</td>
+            <td>Create dashboard tiles that are highly customizable and can contain data from multiple devices.</td>
+            <td>Dashboard, Monitoring, Temperature & Humidity, Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Remote Builder for Hubitat</td>
+            <td>Create virtual remotes to control devices around the home from any device, with or without using the Hubitat Dashboard.</td>
+            <td>Convenience, Buttons, Multimedia, Integrations, Utilities, Dashboards</td>
+        </tr>
+        
+        <tr>
+            <td>Zigbee</td>
+            <td>Zigbee Monitor Driver</td>
+            <td>Driver for dedicated Zigbee Repeaters and simple Switches that allows the gathering and display of a range of Zigbee information including Children, Neighbors, LQI and Route information.</td>
+            <td>Zigbee, Repeaters & Extenders, Monitoring, Integrations</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Device Mirror Plus</td>
+            <td>Replicate device commands not only for Switches, but also  Motion, Contact, Humidity, and Temperature Sensors</td>
+            <td>Doors & Windows, Multi Sensors, Presence & Location, Temperature & Humidity, Tools & Utilities, Zigbee, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>YoLink Devices</td>
+            <td>Integrates YoLink hub and device control within Hubitat.</td>
+            <td>Cloud, Misc. Devices, Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>TeslaMate</td>
+            <td>Uses the MQTT feed published by TeslaMate to expose monitored Tesla vehicles as read-only Hubitat devices</td>
+            <td>Vehicles & Transportation</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Holiday Lighting</td>
+            <td>Themed light shows on RGB lights on holidays</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Filtered Device Mirror</td>
+            <td>Create a virtual device that reflects a single capability of a more complex device</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Palette Scenes</td>
+            <td>RGB light displays</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Single Active Switch</td>
+            <td>At most one switch in a group can be on simultaneously</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Groupthink</td>
+            <td>Enforces consistency between a group activator and its groupState</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Virtual Prestaging</td>
+            <td>Given a primary (likely virtual) device that has the desired values, the selected properties from the primary device will be sent to other devices when they turn on and as the primary changes.</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Contained Motion Zones</td>
+            <td>Combines motion sensors, contact sensors that define a boundary, and contact sensors that reflect presence to power a virtual motion sensor.</td>
+            <td>Motion Control</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Enhanced Weather Underground Driver</td>
+            <td>Enhanced Wunderground Driver with auto switching of the detailed forecast from Day to Night, Web hosted Weather Icons and more data fields for your automations</td>
+            <td>Weather, Cloud</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Netatmo (Connect) - Weather Station</td>
+            <td>Netatmo (Connect) - Weather Station Application and Drivers. Includes some minor enhancements to Dashboard tile views.</td>
+            <td>Weather, Cloud</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Amber Electric Integration for Hubitat</td>
+            <td>Hubitat Driver for Aussie Amber Electric customers</td>
+            <td>Energy Monitoring, Cloud</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Fronius Solar Inverter Driver for Hubitat</td>
+            <td>Fronius Solar Inverter Driver for Hubitat</td>
+            <td>Energy Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>LG WebOS TV</td>
+            <td></td>
+            <td>LAN, Multimedia</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Netatmo</td>
+            <td></td>
+            <td>LAN, Cloud, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Netatmo - Velux</td>
+            <td></td>
+            <td>LAN, Cloud, Safety & Security, Doors & Windows</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>MetricLogger</td>
+            <td></td>
+            <td>LAN, Monitoring, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Aeotec Heavy Duty Smart Switch</td>
+            <td></td>
+            <td>ZWave, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Aeotec MultiSensor 6</td>
+            <td></td>
+            <td>ZWave, Multi Sensors</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Aeotec Water Sensor 6</td>
+            <td></td>
+            <td>ZWave, Multi Sensors</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Fibaro Smoke Sensor</td>
+            <td></td>
+            <td>ZWave, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Z-Wave Range Extender</td>
+            <td></td>
+            <td>ZWave, Repeaters & Extenders</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Heatit Z-Temp2</td>
+            <td></td>
+            <td>ZWave, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>LokiLogLogger</td>
+            <td></td>
+            <td>LAN, Monitoring, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>LokiZWaveLogger</td>
+            <td></td>
+            <td>LAN, ZWave, Monitoring, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>LokiZigbeeLogger</td>
+            <td></td>
+            <td>LAN, Zigbee, Monitoring, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Popp Electric Strike Lock Control</td>
+            <td></td>
+            <td>ZWave, Locks</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Popp Z-Rain Sensor</td>
+            <td></td>
+            <td>ZWave, Weather, Water</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Qubino Flush Pilot Wire</td>
+            <td></td>
+            <td>ZWave, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Qubino Flush Shutter - CMV</td>
+            <td></td>
+            <td>ZWave, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Schwaiger Temperature Sensor</td>
+            <td></td>
+            <td>ZWave, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sonoff RF Bridge</td>
+            <td></td>
+            <td>LAN, IR & RF, Window Coverings, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Xiaomi Mijia</td>
+            <td></td>
+            <td>LAN, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Zipato Mini RFID Keypad</td>
+            <td></td>
+            <td>ZWave, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Eurotronic Air Quality Sensor</td>
+            <td></td>
+            <td>ZWave, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Panasonic - Comfort Cloud</td>
+            <td></td>
+            <td>LAN, Cloud, Climate Control, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Warmup - Cloud</td>
+            <td></td>
+            <td>LAN, Cloud, Climate Control, Climate Control, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>ShellyPlus Generic</td>
+            <td></td>
+            <td>LAN, Cloud, Lights & Switches, Temperature</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>ShellyPlus Pilot Wire</td>
+            <td></td>
+            <td>LAN, Cloud, Climate Control, Lights & Switches, Temperature</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Govee Integration v1</td>
+            <td>This will provide Govee integration</td>
+            <td>Misc. Devices, Cloud, Lights & Switches, Appliances, Integrations</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Govee Integration v2</td>
+            <td>Govee integration using Govee Development Platform</td>
+            <td>Misc. Devices, Cloud, Lights & Switches, Appliances, Integrations</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Govee Matter Drivers</td>
+            <td>Matter Drivers for Govee Devices</td>
+            <td>Misc. Devices, Cloud, Lights & Switches, Appliances, Integrations</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Air Gradient Universal driver</td>
+            <td>Air Gradient Universal driver</td>
+            <td>Misc. Devices, Cloud, Integrations</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>BLE Gateway Manager</td>
+            <td>Processes incoming bluetooth beacon data for home automation using a BLE gateway</td>
+            <td>Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Sensor Groups+</td>
+            <td>An app for grouping sensors.</td>
+            <td>Automations & Groups, Multi Sensors, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Window Tracker</td>
+            <td>An app for checking contact sensors for house fans</td>
+            <td>Automations & Groups, Multi Sensors, Tools & Utilities, Utility</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Energy Cost Calculator</td>
+            <td>An app for calculating energy costs</td>
+            <td>Tools & Utilities, Energy Monitoring, Monitoring, Utility</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>IoTaWatt+</td>
+            <td>An driver for integrating IoTaWatt into Hubitat.</td>
+            <td>Tools & Utilities, Energy Monitoring, Monitoring, Utility</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Bambu Labs Printers</td>
+            <td>A driver for integrating Bambu Labs 3D printers.</td>
+            <td>Tools & Utilities, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Iris v1 Keypad</td>
+            <td>IRIS v1 keypad driver.Provides arm disarm and button remapping. 15 digit pins supported. Keypad supports 13 diffrent chimes under play command. Option for Silent arming. Many setup options, Info,debug,trace logs. Use as chimes or alarms, Bad pin can set tamper, Unlike newer keypads it can cancel a safety alarm if the alarm is disarmed. Supports arming with or without a valid PIN. Supports Remapping ON PART # * buttons as armaway armhome armnight as you see fit. </td>
+            <td>Buttons, Alarm Systems, Lights & Switches, Presence & Location, Safety & Security, Locks, Misc. Devices, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Iris v1 Contact Sensor-custom</td>
+            <td>Iris v1 Contact Sensor custom. With presence and proper battery support. No more negative battery readings. Includes option to use as a mains detection swith with a relay.Note relay must have time delay so it renergised after hub has powered up. </td>
+            <td>Buttons, Alarm Systems, Doors & Windows, Presence & Location, Safety & Security, Temperature & Humidity, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Third Reality Contact Sensor</td>
+            <td>Improved Third Reality Motion Sensor with Presence better drop out detection,battery support</td>
+            <td>Lights & Switches, Alarm Systems, Presence & Location, Safety & Security, Doors & Windows, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Iris v1 Motion Detector Custom</td>
+            <td>Iris v1 Motion Sensor. With presence and proper battery support. No more negative battery readings</td>
+            <td>Lights & Switches, Alarm Systems, Presence & Location, Safety & Security, Temperature & Humidity, Motion Control, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Iris v1 Senior Care Pendant</td>
+            <td>Simulates IRIS v1 pay care level system. Pressing button triggers alarm on dashboard and beeps red until dashboard alarm is turned off this notifies pendant holder by beeping green. Requires yuo add it to dashboard as a switch and as presence. Option to use as a straight Keyfob</td>
+            <td>Buttons, Alarm Systems, Monitoring, Presence & Location, Safety & Security, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SmartThings Arrival Sensor Chime V2</td>
+            <td>SmartThings arrival sensor v2 with adjustable chimes. Can play chimes of diffrent legenths.</td>
+            <td>Monitoring, Presence & Location, Safety & Security, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Iris v1 keyfob custom</td>
+            <td>Rewritten Iris v1 kefob. Supports holdable buttons , presence recovery no more false no presence toggles. and adjustable timeout. New battery support no negative voltage readings. Also supports custom mode AWAY/HOME</td>
+            <td>Monitoring, Presence & Location, Safety & Security, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Iris v1 Repeator Zigbe</td>
+            <td>Iris v1 extender driver. Supports battery and presence. Zigbee side</td>
+            <td>Repeaters & Extenders, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Iris v1 Smart Plug custom</td>
+            <td>Iris v1 Smart Plug driver With power monitoring watts and kwh, presence and support for using as a alarm or strobe using low cost strobes and sirens</td>
+            <td>Misc. Devices, Alarm Systems, Buttons, Lights & Switches, Presence & Location, Energy Monitoring, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Radio Thermostat Zwave</td>
+            <td>The Radio Thermostat Driver for most any Radio Thermostat. (ZWAVE) CT100,CT101,CT30,CT32 and more. Polling schedule and many extra options, Improved logging to detect errors info,debug,trace. Many manual options to set up device other drivers dont have. Option to use only heat or cool. Prevents dashboard getting out of sync with thermostat. If you have a RT you know all the problems other drivers have. This driver will fix your problems. Writen for my thermostats because the other drivers just did not work for me.</td>
+            <td>Temperature & Humidity, Climate Control, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Utilitech Water Sensor</td>
+            <td>Improved Everspring/Utilitech Water Sensor with presence and better drop out detection,battery support,and settings, Support to stop the device from drooping off with dead batteries by providing presence and dead bat detection.with info debug and trace logs</td>
+            <td>Monitoring, Safety & Security, Water, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Iris CentraLite Samjin Smartthings water Sensor</td>
+            <td>Improved Iris CentraLite Samjin Smartthings water Sensor with Presence,Tamper for Centralite and better drop out detection,battery support</td>
+            <td>Monitoring, Safety & Security, Water, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Third Reality Water Sensor</td>
+            <td>Improved Third Reality Water Sensor with Presence better drop out detection,battery support</td>
+            <td>Monitoring, Alarm Systems, Presence & Location, Safety & Security, Water, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Iris Utilitech Siren driver</td>
+            <td>Verifies state after turn and off. No more refusing to turn off,Presence,Auto dead bat detection, Auto time off timmer that works.</td>
+            <td>Alarm Systems, Safety & Security, Misc. Devices, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>LeakSmart Water Valve</td>
+            <td>Improved LeakSmart driver (Zigbee) better battery support, mains detection ,better logging ,Stuck valve detection, fix for valves with broken mains detection firmware, Works with IRIS version also,Supports contact,switch & wet dry with info debug and trace logs</td>
+            <td>Energy Monitoring, Monitoring, Water, Valves, Misc. Devices, Safety & Security, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Lock Button Monitor</td>
+            <td>Lock button monitor. works with most Schlage and Vale locks. Create a virtual button and then set this app to that button and your lock. The buttons will be assigned the outside lock button inside knob and unlock codes. This is a beta version it only supports one lock. </td>
+            <td>Monitoring, Misc. Devices, Locks, Buttons, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Lock Button Monitor2</td>
+            <td>Lock button monitor2. for second lock, works with most Schlage and Vale locks. Create a virtual button and then set this app to that button and your lock. The buttons will be assigned the outside lock button inside knob and unlock codes. This is a beta version it only supports one lock. </td>
+            <td>Monitoring, Misc. Devices, Locks, Buttons, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Smartthings Samjin button</td>
+            <td>Smartthings Samjin button with improved battery reports and Presence. Auto dead bat detection. 3 Button support for easer scripts</td>
+            <td>Buttons, Safety & Security, Presence & Location, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>iris v1 button</td>
+            <td>IRIS v1 button with improved battery reports and Presence. Auto dead bat detection. 3 Button support for easer scripts. pressed,held,held longer, button 1 pressed button 2 held button 3 held longer</td>
+            <td>Buttons, Safety & Security, Presence & Location, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>sage doorbell echostar</td>
+            <td>Doorbell driver. Detect dead bat with presence detection,  And support debug,trace logs.</td>
+            <td>Buttons, Alarm Systems, Safety & Security, Presence & Location, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Sage light switch echostar</td>
+            <td>Sage Light Switch driver. With presence and virtual switch,Button support and simulated battery value</td>
+            <td>Misc. Devices, Buttons, Lights & Switches, Presence & Location, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zigbee Sonoff - generic relays</td>
+            <td>Works with Sonoff MINI ZB,eWeLink,3A Smart Home and other generic zigbee relays. And generic outlets. Presence,Lamp_01,SA-003-Zigbee,01MINIZB,BASICZBR3,LXN59-1S7LX1.0, Sylvania SMART + LEDVANCE</td>
+            <td>Misc. Devices, Alarm Systems, Buttons, Lights & Switches, Presence & Location, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>HTTP Presence Sensor with schedule</td>
+            <td>Improved HTTP Presence sensor with  adjustable chron schedule. detects 404 file not found and 401 password, for IP cameras asking for a password</td>
+            <td>Tools & Utilities, LAN, Misc. Devices, Monitoring, Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Iris v2 Contact Sensor</td>
+            <td>Iris v2 contact sensor with presence. Automatic bad battery detection presence, iMagic by GreatStar 1116-S & CentraLite 3320-L</td>
+            <td>Buttons, Alarm Systems, Doors & Windows, Presence & Location, Safety & Security, Temperature & Humidity, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Iris v2 Motion Detector</td>
+            <td>Iris v2 Motion Sensor with presence. CentraLite Model:3326-L</td>
+            <td>Lights & Switches, Alarm Systems, Presence & Location, Safety & Security, Temperature & Humidity, Motion Control, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>CentraLite Motion Detector</td>
+            <td>CentraLite Motion Sensor with presence. CentraLite Model:3326-L,3325,3305,3325-S,3305-S (not for motionv4 motionv5)</td>
+            <td>Lights & Switches, Alarm Systems, Presence & Location, Safety & Security, Temperature & Humidity, Motion Control, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SmartThings Motion Detector</td>
+            <td>SmartThings Motion Sensor with presence. Model:motionv4,motionv5 (Not for Centralite)</td>
+            <td>Lights & Switches, Alarm Systems, Presence & Location, Safety & Security, Temperature & Humidity, Motion Control, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Third Reality Motion Sensor</td>
+            <td>Improved Third Reality Motion Sensor with Presence better drop out detection,battery support</td>
+            <td>Lights & Switches, Alarm Systems, Presence & Location, Safety & Security, Motion Control, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Smartthings multi Sensor V3 (custom)</td>
+            <td>Smartthings multiswitch v3 by Samjin. Fixes bad battery reports autodetect dead battery,presence</td>
+            <td>Alarm Systems, Doors & Windows, Presence & Location, Safety & Security, Temperature & Humidity, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Dimable CT Bulb driver - Zigbee</td>
+            <td>Works with most dimable led and CT Bulbs</td>
+            <td>Misc. Devices, Lights & Switches, Presence & Location, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>RGBW CT Bulbs - Zigbee</td>
+            <td>Works with eWeLight,Seedan and other RGBW bulbs,ZB-CL01. May work with others provides presence and checkin monitoring</td>
+            <td>Misc. Devices, Lights & Switches, Presence & Location, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SmartWings Zigbee Shades</td>
+            <td>Control your Smartwings Motor Shades Zigbee model. Motor type WM25/L-Z</td>
+            <td>Window Coverings, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Rheem EcoNet Integration (maintained)</td>
+            <td>App and driver for Rheem EcoNet supported water heaters and thermostats.</td>
+            <td>Temperature & Humidity, Water Heater</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Canadian Hyundai Bluelink</td>
+            <td>This is the package to use the Canadian Hyundai Bluelink facility with Hubitat</td>
+            <td>Vehicles & Transportation</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Ring Alarm Keypad G2 Community Driver</td>
+            <td>Make the Ring Keypad Gen2 do more!</td>
+            <td>ZWave, Alarm Systems, Monitoring, Safety & Security, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>WogaLWRF Lightwave Integration</td>
+            <td>Integrate Lightwave Gen2 environment into your Hubitat system</td>
+            <td>Cloud, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Philips Hue Tap Dial Drivers</td>
+            <td>Drivers for Hubitat, hue bulbs, etcs</td>
+            <td>Buttons</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Tuya IoT Platform (Cloud)</td>
+            <td>Tuya IoT Platform (Cloud)</td>
+            <td>Cloud</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>ESPHome Integration Library and Example Drivers</td>
+            <td>Library and example drivers for ESPHome devices using the Native (Home Assistant) API</td>
+            <td>LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>LED Mini-Dashboards for Inovelli Switches</td>
+            <td>This application allows easy linking of Hubitat device, variables and HSM states to LEDs of your Inovelli switches</td>
+            <td>Dashboards, Lights & Switches, Monitoring, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Philips Hue Zigbee Drivers</td>
+            <td>Enhanced support for Philips Hue devices that are connected via Zigbee (not using the bridge)</td>
+            <td>Lights & Switches, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Third Reality Zigbee Drivers</td>
+            <td>Enhanced support for Third Reality Zigbee devices</td>
+            <td>Energy Monitoring, Lights & Switches, Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Aqara Human Presence Sensor FP1</td>
+            <td>Aqara Human Presence Sensor FP1</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>AdGuard Home DNS Manager (Unofficial)</td>
+            <td>App and Driver to control AdGuard Home DNS Servers and Clients</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ubiquiti UniFi Controller Manager</td>
+            <td>App and Drivers to control Ubiquiti UniFi Controllers, and to serve UniFi Protect camera snapshots.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Elgato Integrations</td>
+            <td>Allows integrating Elgato devices into your Hubitat system</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>HubiThings Replica</td>
+            <td>Hubitat Application to manage SmartThings Devices allowing real-time bi-direction updates between devices, modes and scenes utilizing the SmartThings OAuth Cloud API. Includes the ability to have multiple ST locations with multiple ST hubs replicated to a single Hubitat hub. It is not a requirement to have a ST hub to operate mirror functions to cloud native ST devices.</td>
+            <td>Automations & Groups, Cloud, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Roborock Robot Vacuum</td>
+            <td>Hubitat Driver to integrate with Roborock Robot Vacuums. Requires user account and password from mobile application to enable.</td>
+            <td>Automations & Groups, Cloud, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Life360+</td>
+            <td>Life360 app that exposes more details than the built-in driver</td>
+            <td>Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Orbit Bhyve+</td>
+            <td>Orbit Bhyve Integration</td>
+            <td>Irrigation, Water, Valves</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>HD+ Companion App</td>
+            <td>Companion Hubitat app/driver for HD+ Android app</td>
+            <td>Presence & Location, Notifications, Voice Assistants</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>HD+ Tile</td>
+            <td>Quick way to create virtual HD+ Tiles (ie: image/video/calendar)</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>zigbee-graph</td>
+            <td>Allows you to visually render getChildAndRouteInfo of your Hubitat system.</td>
+            <td>Zigbee, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Dashboard Widgets</td>
+            <td>Allows you to add custom widgets to Hubitat dashboards.</td>
+            <td>Dashboards, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>IKEA Zigbee drivers</td>
+            <td>Drivers for most of the IKEA Zigbee smart devices including TRADFRI lights.</td>
+            <td>Zigbee, Buttons, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Zigbee Pairing Helper</td>
+            <td>Allows you to pair a new Zigbee device through a specific existing Zigbee device from the mesh.</td>
+            <td>Zigbee</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Zigbee Map</td>
+            <td>Visualize the topology and connectivity of your Zigbee network.</td>
+            <td>Zigbee, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Hub-a-Dashery</td>
+            <td>View dashboards for your Hubitat hub metrics.</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Hubitat drivers for NodOn smart devices.</td>
+            <td>Drivers for the following NodOn devices: SIN-4-1-20, SIN-4-1-21, SIN-4-2-20, SIN-4-FP-21, SIN-4-RS-20.</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Watchtower</td>
+            <td>Watchtower is the all-in-one app for long-term smart home monitoring and data visualization. Staying true to Hubitat's core value, the application works 100% locally, with no reliance on the cloud. Plus, there's no need for extra hardware like Raspberry Pi or NAS.</td>
+            <td>Tools & Utilities, Dashboards, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Lumos</td>
+            <td>Control lights using motion and contact sensors.</td>
+            <td>Motion Control, Doors & Windows, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sensibo Integration</td>
+            <td>Integration with the Sensibo Sky AC aircon controllers (cloud integration)</td>
+            <td>Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>myenergi Integration</td>
+            <td>Integration with the myenergi line of solar control products</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>T-Mobile Home Internet Gateway Driver</td>
+            <td>Provides an interface with T-Mobile Home Internet's gateway.</td>
+            <td>Misc. Devices, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Internet Connection Monitor</td>
+            <td>Hubitat driver to monitor internet connection</td>
+            <td>Cloud, Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Hubitat Hayward AquaConnect</td>
+            <td>Hubitat Hayward AquaConnect integration (v0.0.2)</td>
+            <td>Pools & Spas</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Hubitat Alarm.com Panel</td>
+            <td>Alarm.com Panel implementation for Hubitat</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Hunter Douglas Platinum Shades</td>
+            <td>Hubitat Implementation for Hunter Douglas Platinum Shades</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sonos Favorites Support</td>
+            <td>Sonos Favorites Support for Hubitat</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Nest Doorbell via Starling Hub</td>
+            <td>Starling Hub Support for Hubitat</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Schlage WiFi Locks</td>
+            <td>Schlage WiFi Locks for Hubitat</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Kidde HomeSafe</td>
+            <td>Kidde HomeSafe for Hubitat</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Anthem MRX x40 Driver</td>
+            <td>Driver for Anthem MRX x40 Receivers</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>HousePanel</td>
+            <td>Highly flexible dashboard with HE and ISY hub support and an integrated rule engine</td>
+            <td>Dashboards</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Garage Door Opener</td>
+            <td>An app and driver that can combine a switch/relay and one or two contact/tilt sensors to create a garage door control device.</td>
+            <td>Garage Doors</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>My Location</td>
+            <td>User Location driver for use with HD+</td>
+            <td>Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>N/A</td>
+            <td>Rule Machine Manager</td>
+            <td>Visual interface for Managing Rule Machine Rules.</td>
+            <td>Rule Manager</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Unifi Access</td>
+            <td>Control Unifi Access lock via local API</td>
+            <td>Locks</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>WyzeHub (Updated to Use API Key)</td>
+            <td>Integration for Wyze devices using the Wyze API (Key Required).</td>
+            <td>Cloud, Lights & Switches, Multimedia</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Rental Automator</td>
+            <td>This Hubitat app provides a direct integration with AirBNB and control over changing modes and programming door locks without the use of any other services, such as the Maker API and/or other applications.</td>
+            <td>Alarm Systems, Automations & Groups, Locks, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Neptune Apex Bridge (A3 Series)</td>
+            <td>Monitor and control a Neptune Systems Apex aquarium controller</td>
+            <td>Pets & Animals</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Garage Door Opener v1 (GDOv1-S)</td>
+            <td>Integrate the Konnected GDO White (GDOv1-S)</td>
+            <td>Garage Doors</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Garage Door Opener White (GDOv2-S)</td>
+            <td>Integrate the Konnected GDO White (GDOv2-S)</td>
+            <td>Garage Doors</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Garge Door Opener blaQ (GDOv2-Q)</td>
+            <td>Integrate the Konnected GDO blaQ (GDOv2-Q)</td>
+            <td>Garage Doors</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Alarm Panel (universal)</td>
+            <td>Integrate the Konnected Alarm Panel and Alarm Panel Pro (on new ESPHome firmware)</td>
+            <td>Alarm Systems, Safety & Security, Monitoring, Doors & Windows</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>PJLink Projector Driver</td>
+            <td>Driver for PJLink-compatible projectors</td>
+            <td>Multimedia, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>ratgo (MQTT firware)</td>
+            <td>Control your ratgdo MyQ alternative</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>OwnTracks</td>
+            <td>Connects OwnTracks mobile app to Hubitat</td>
+            <td>Presence & Location, Automations & Groups, Monitoring, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Remotec / ZVIDAR Z-Wave Thermostat Radiator Valve Driver</td>
+            <td>Driver for Z-Wave 800 TVR by ZVIDAR</td>
+            <td>Climate Control, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Qubino DIN Dimmer Driver</td>
+            <td>Driver for Z-Wave DIN Dimmer without temp capability by Qubino</td>
+            <td>Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Qubino Smart Plug 16A Driver</td>
+            <td>Driver for Z-Wave Smart Plug 16A by Qubino</td>
+            <td>Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Heatit ZM Dimmer 250W Driver</td>
+            <td>Driver for ZM Dimmer 250W by Heatit.</td>
+            <td>Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Aeotec Smart Switch 7 EU version Driver</td>
+            <td>Driver for Smart Switch 7 EU version by Aeotec.</td>
+            <td>Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Shelly Wave 1PM Driver</td>
+            <td>Driver for Wave 1PM QNSW-0001P16EU by Shelly.</td>
+            <td>Lights & Switches, ZWave</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Hikvision Camera Controller</td>
+            <td>Hikvision Camera Controller and Alarm Server</td>
+            <td>Alarm Systems, Cameras, Monitoring, Motion Control, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Sonos Advanced Controller</td>
+            <td>Advanced app and driver for Sonos speakers. Allows non-interrupting TTS, grouping control, and more.</td>
+            <td>Speakers, Multimedia, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Window Coverings</td>
+            <td>Third Reality Smart Blind Drivers</td>
+            <td>Improved driver for Third Reality Smart Blinds. Adds 'verfication' checks to ensure blinds always move to 'desired' position, eliminating issues where blinds might otherwise fail to respond to the first ZigBee command sent.</td>
+            <td>Window Coverings, ZigBee</td>
+        </tr>
+        
+        <tr>
+            <td>Presence & Location</td>
+            <td>HTTP Presence Helper</td>
+            <td>HTTP Presence Helper App. Provides local and cloud endpoints for present/not present updates of presence/</td>
+            <td>Utility, Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Stelpro Allia ZigBee Thermostat</td>
+            <td>Zigbee driver for Stelpro Allia Zigbee Thermostats</td>
+            <td>Climate Control, Zigbee, Energy Monitoring</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Advanced Broadlink Remote</td>
+            <td>Combine power monitors and IR Broadlink remotes to turn dumb appliances into smart ones</td>
+            <td>IR & RF, Appliances, Cleaning Devices, Misc. Devices, Multimedia</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>MeteoMatics</td>
+            <td>Driver for the MeteoMatics API</td>
+            <td>Weather, Cloud</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Shelly Webhook/Websocket Drivers</td>
+            <td>Shelly device drivers. Using Webhook/Websocket, no MQTT necessary.</td>
+            <td>Buttons, Climate Control, Doors & Windows, Energy Monitoring, LAN, Lights & Switches, Motion Control, Presence & Location, Relays, Temperature & Humidity, Security, Valves</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Flair Vents</td>
+            <td>Control Flair Smart Vents in Hubitat and add Dynamic Airflow Balancing</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Freestyle Libre Integration</td>
+            <td>Freestyle Libre Integration</td>
+            <td>Health & Fitness</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Aroma-Link Integration</td>
+            <td>Aroma-Link Integration</td>
+            <td>Climate Control</td>
+        </tr>
+        
+        <tr>
+            <td>Utility</td>
+            <td>Degree Days Irrigation Timer</td>
+            <td>Use the weather to schedule your irrigation</td>
+            <td>Irrigation, Weather, Water</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Door Chime</td>
+            <td>Set up custom sounds to trigger when doors are opened; anytime, only during certain Modes, or based on HSM Status</td>
+            <td>Doors & Windows, Alarm Systems, Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>SolArk Inverter</td>
+            <td>Leverages the MySolArk API to update Hubitat with your SolArk inverter status</td>
+            <td>Energy Monitoring, Cloud</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Windows Battery Driver</td>
+            <td>Read a Windows computer Task Schedule for Hubitat to determine its state of charge</td>
+            <td>Energy Monitoring, Misc. Devices, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Reolink IP Camera</td>
+            <td>Turns on or off your Reolink IP Camera's motion detection push/email notifications</td>
+            <td>Monitoring, Notifications, LAN</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Linptech 24Ghz Presence Sensor ES1</td>
+            <td>Linptech 24Ghz Presence Sensor ES1</td>
+            <td>Zigbee, Presence & Location</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Yale Home</td>
+            <td>Yale Home WiFi Bridge Locks & Keypads</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - GW3 - RF</td>
+            <td>MolSmart - Drivers for the GW3 IP/RF Gateway</td>
+            <td>Doors & Windows, Garage Doors, IR & RF</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - Relay 4/8/16/32CH (TCP)</td>
+            <td>MolSmart - Drivers for the 4/8/16/32 Relay Modules</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - Dimmer 6CH (TCP)</td>
+            <td>MolSmart - Drivers for the 6CH Dimmer Module</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SoundSmart Player (1 de 2)</td>
+            <td>SoundSmart - Drivers for the SoundSmart Player component Only.</td>
+            <td>Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - GW3 - IR(HEX) - AC</td>
+            <td>MolSmart - GW3 - IR - Drivers for HEX Protocol for IR / AC Devices</td>
+            <td>Climate Control, IR & RF</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - GW3 - IR(SendIR) - AC</td>
+            <td>MolSmart - GW3 - IR - Drivers for SendIR Protocol for IR / AC Devices</td>
+            <td>Climate Control, IR & RF</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - GW3 - IR(iDoor) - AC</td>
+            <td>MolSmart - GW3 - IR - Drivers for iDoor Protocol for IR / AC Devices</td>
+            <td>Climate Control, IR & RF</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - GW3 - IR(Learning) - AC</td>
+            <td>MolSmart - GW3 - IR - Drivers for Learning (Copy) Protocol for IR / AC Devices</td>
+            <td>Climate Control, IR & RF</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Controlart - Ethernet Relay Module</td>
+            <td>Controlart - Ethernet Relay Module Drivers (10 outputs, 12 inputs)</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - GW3 - IR(HEX) - TV e SOM</td>
+            <td>MolSmart - GW3 - IR - Drivers for HEX Protocol for IR / TV, Sound, and Other Receivers IR</td>
+            <td>IR & RF, Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - GW3 - IR Universal(Learning)</td>
+            <td>MolSmart - GW3 - IR - Drivers for Universal Learning using idoor APP</td>
+            <td>Garage Doors, IR & RF, Climate Control, Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart GW3 - IR(SendIR) - TV e SOM</td>
+            <td>MolSmart - GW3 - IR - Drivers for SendIR Protocol for IR / TV, Sound, and Other Receivers IR</td>
+            <td>Garage Doors, IR & RF, Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>SoundSmart - Group MultiRoom (2 de 2)</td>
+            <td>SoundSmart - Drivers for the SoundSmart MultiRoom setup. (SoundSmart Player (1 de 2) drivers should be already installed)</td>
+            <td>Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart GW3 -IR(iDoor) - TV e SOM</td>
+            <td>MolSmart - GW3 - IR - Drivers for iDoor for IR / TV, Sound, and Other Receivers IR</td>
+            <td>IR & RF, Speakers</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - GW3 - TV (irweb)</td>
+            <td>MolSmart - GW3 - IR - Drivers for TV IR Remote Controls Created at website ir.molsmart.com.br. </td>
+            <td>IR & RF</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>MolSmart - GW3 - AC (irweb)</td>
+            <td>MolSmart - GW3 - IR - Drivers for AC IR Remote Controls Created at website ir.molsmart.com.br. </td>
+            <td>IR & RF</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Control ID - Controller</td>
+            <td>ControlID - Driver to Control the SecBox of ControlID, and functions to operate remotely the ControlID device</td>
+            <td>Alarm Systems, Doors & Windows, Garage Doors, Locks</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Hikvision - Controller</td>
+            <td>Hikvision - Driver to Control Door of HikVision, and functions to operate remotely (open/close/restart)</td>
+            <td>Alarm Systems, Doors & Windows, Garage Doors, Locks</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Wmc Utils</td>
+            <td>General-purpose functions leveraged in downstream Wmc Apps & Devices</td>
+            <td>Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Wmc Pbsg (Push Button Switch Group)</td>
+            <td>Create virtual keypads with mutually-exclusive buttons and corresponding virtual switches.</td>
+            <td>Buttons, Lights & Switches, Misc. Devices, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>TTLock</td>
+            <td>TTLock locks integrations</td>
+            <td>Locks, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Security</td>
+            <td>Abode Alarm 2024</td>
+            <td>Realtime management and tracking of an Abode Alarm system (2024 update) with child devices.</td>
+            <td>Alarm Systems, Monitoring, Safety & Security</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>AcuRite Temperature Sensor Mqtt Driver</td>
+            <td>A device driver that integrates Acurite sensors via MQTT and RTL_433. It provides real-time temperature and humidity readings using MQTT.</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>Notifications</td>
+            <td>ClearlyIP SMS Notification Driver</td>
+            <td>A Hubitat driver that sends SMS notifications via the ClearlyIP Unity SMS API.</td>
+            <td>Notifications</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Hubitat IntelliFire</td>
+            <td>Hubitat interface for controlling Intellifire fireplaces</td>
+            <td>Appliances, Climate Control, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Convenience</td>
+            <td>Automatic Timer</td>
+            <td>This app is designed to be used as a timer to automatically turn on/off a switch after a configurable amount of time. Optionally, you may configure an override switch which prevents the timer from running.</td>
+            <td>Timers, Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Control</td>
+            <td>Schedule Manager</td>
+            <td>Use this app to schedule switches, outlets and lights. Optionally configure modes and overrides.</td>
+            <td>Lights & Switches</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Ambient Weather Station</td>
+            <td>Integrates your Internet connected Ambient Weather Station system into the Hubitat environment.</td>
+            <td>Weather, Monitoring, Pools & Spas, Temperature & Humidity</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>Hubitat on Apple Menubar</td>
+            <td>Monitor and control Hubitat devices, sensors, Hubitat Safety Monitor and Modes quickly from the Apple Menu Bar.  Requires freeware Xbar 2.17-Beta, Python3 v3.11+, Apple macOS v13+</td>
+            <td>Monitoring, Tools & Utilities</td>
+        </tr>
+        
+        <tr>
+            <td>Integrations</td>
+            <td>BWA Spa Manager</td>
+            <td>Integrates your internet connected Hot Tub/Spa system with Balboa Cloud Spa Controller into the Hubitat environment.</td>
+            <td>Monitoring, Pools & Spas, Temperature & Humidity, Monitoring, Water</td>
+        </tr>
+        
+    </table>
+</body>
+</html>
